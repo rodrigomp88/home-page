@@ -79,7 +79,7 @@ const Navbar = props => {
           </LinkItem>
           <LinkItem
             _target="_blank"
-            href=""
+            href="https://github.com/rodrigomp88/home-page"
             path={path}
             display="inline-flex"
             alignItems="center"
@@ -112,7 +112,11 @@ const Navbar = props => {
                 <NextLink href="/contact" passHref>
                   <MenuItem as={Link}>Contacto</MenuItem>
                 </NextLink>
-                <MenuItem as={Link} href="" style={{ gap: 4 }}>
+                <MenuItem
+                  as={Link}
+                  href="https://github.com/rodrigomp88/home-page"
+                  style={{ gap: 4 }}
+                >
                   <IoLogoGithub />
                   View source code
                 </MenuItem>
