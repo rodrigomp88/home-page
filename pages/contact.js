@@ -10,7 +10,7 @@ const Contact = () => (
       </Heading>
       <SimpleGrid columns={[1, 1, 2]} gap={6}>
         <Section delay={0.1}>
-          <form name="contact" method="POST" data-netlify="true">
+          <form name="contact" action="POST" data-netlify="true">
             <p>
               <label>
                 Name <input type="text" name="name" />
@@ -21,6 +21,9 @@ const Contact = () => (
                 Email <input type="email" name="email" />
               </label>
             </p>
+            <div className="actions">
+              <div data-netlify-recaptcha></div>
+            </div>
             <p>
               <button type="submit">Send</button>
             </p>
