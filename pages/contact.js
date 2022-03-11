@@ -10,7 +10,7 @@ const Contact = () => (
       </Heading>
       <SimpleGrid columns={[1, 1, 2]} gap={6}>
         <Section delay={0.1}>
-          <form name="contact" netlify="true">
+          <form name="contact" netlify>
             <p>
               <label>
                 Name <input type="text" name="name" />
