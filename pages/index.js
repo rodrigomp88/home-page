@@ -12,7 +12,7 @@ import {
   Icon,
   useColorModeValue
 } from '@chakra-ui/react'
-import { ChevronRightIcon, ExternalLinkIcon } from '@chakra-ui/icons'
+import { ChevronRightIcon } from '@chakra-ui/icons'
 import Paragraph from '../components/paragraph'
 import { BioSection, BioYear } from '../components/bio'
 import Layout from '../components/layouts/article'
@@ -53,7 +53,7 @@ const Home = () => (
         <Box flexGrow={1}>
           <Heading>Pinea Rodrigo</Heading>
           <p>( Fron-End / Back-End )</p>
-          <NextLink href="">
+          {/* <NextLink href="">
             <Link
               fontWeight="bold"
               href="/curriculum.pdf"
@@ -63,7 +63,7 @@ const Home = () => (
             >
               Descarga mi CV <ExternalLinkIcon />
             </Link>
-          </NextLink>
+          </NextLink> */}
         </Box>
         <Box
           flexShrink={0}
