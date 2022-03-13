@@ -1,4 +1,4 @@
-import { useFormik } from 'formik'
+// import { useFormik } from 'formik'
 import {
   Box,
   Button,
@@ -9,22 +9,22 @@ import {
   VStack
 } from '@chakra-ui/react'
 
-export default function App() {
-  const formik = useFormik({
-    initialValues: {
-      email: '',
-      name: '',
-      rememberMe: false
-    },
-    onSubmit: values => {
-      alert(JSON.stringify(values, null, 2))
-    }
-  })
+export default function contact() {
+  // const formik = useFormik({
+  //   initialValues: {
+  //     email: '',
+  //     name: '',
+  //     rememberMe: false
+  //   },
+  //   onSubmit: values => {
+  //     alert(JSON.stringify(values, null, 2))
+  //   }
+  // })
   return (
     <Flex bg="gray.100" align="center" justify="center" h="100vh">
       <Box bg="white" p={6} rounded="md">
         <form
-          onSubmit={formik.handleSubmit}
+          // onSubmit={formik.handleSubmit}
           name="contact"
           method="POST"
           data-netlify="true"
@@ -37,8 +37,8 @@ export default function App() {
                 name="email"
                 type="email"
                 variant="filled"
-                onChange={formik.handleChange}
-                value={formik.values.email}
+                // onChange={formik.handleChange}
+                // value={formik.values.email}
               />
             </FormControl>
             <FormControl>
@@ -48,8 +48,8 @@ export default function App() {
                 name="name"
                 type="name"
                 variant="filled"
-                onChange={formik.handleChange}
-                value={formik.values.name}
+                // onChange={formik.handleChange}
+                // value={formik.values.name}
               />
             </FormControl>
             <Button type="submit" colorScheme="purple" isFullWidth>
