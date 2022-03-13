@@ -1,51 +1,63 @@
-import { Container, Heading, SimpleGrid } from '@chakra-ui/react'
-import Layout from '../components/layouts/article'
-import Section from '../components/section'
+import { useFormik } from 'formik'
+import {
+  Box,
+  Button,
+  Flex,
+  FormControl,
+  FormLabel,
+  Input,
+  VStack
+} from '@chakra-ui/react'
 
-const Contact = () => (
-  <Layout title="Contacto">
-    <Container>
-      <Heading as="h3" fontSize={20} mb={4}>
-        Contacto
-      </Heading>
-      <SimpleGrid columns={[1, 1, 2]} gap={6}>
-        <Section delay={0.1}>
-          {/** 
-          
-           <form name="contact" method="POST" data-netlify="true">
-            <p>
-              <label>
-                Your Name: <input type="text" name="name" />
-              </label>
-            </p>
-            <p>
-              <label>
-                Your Email: <input type="email" name="email" />
-              </label>
-            </p>
-            <p>
-              <label>
-                Your Role:{' '}
-                <select name="role[]" multiple>
-                  <option value="leader">Leader</option>
-                  <option value="follower">Follower</option>
-                </select>
-              </label>
-            </p>
-            <p>
-              <label>
-                Message: <textarea name="message"></textarea>
-              </label>
-            </p>
-            <p>
-              <button type="submit">Send</button>
-            </p>
-          </form> 
-          */}
-        </Section>
-      </SimpleGrid>
-    </Container>
-  </Layout>
-)
-
-export default Contact
+export default function App() {
+  const formik = useFormik({
+    initialValues: {
+      email: '',
+      name: '',
+      rememberMe: false
+    },
+    onSubmit: values => {
+      alert(JSON.stringify(values, null, 2))
+    }
+  })
+  return (
+    <Flex bg="gray.100" align="center" justify="center" h="100vh">
+      <Box bg="white" p={6} rounded="md">
+        <form
+          onSubmit={formik.handleSubmit}
+          name="contact"
+          method="POST"
+          data-netlify="true"
+        >
+          <VStack spacing={4} align="flex-start">
+            <FormControl>
+              <FormLabel htmlFor="email">Email Address</FormLabel>
+              <Input
+                id="email"
+                name="email"
+                type="email"
+                variant="filled"
+                onChange={formik.handleChange}
+                value={formik.values.email}
+              />
+            </FormControl>
+            <FormControl>
+              <FormLabel htmlFor="name">name</FormLabel>
+              <Input
+                id="name"
+                name="name"
+                type="name"
+                variant="filled"
+                onChange={formik.handleChange}
+                value={formik.values.name}
+              />
+            </FormControl>
+            <Button type="submit" colorScheme="purple" isFullWidth>
+              Enviar
+            </Button>
+          </VStack>
+        </form>
+      </Box>
+    </Flex>
+  )
+}
