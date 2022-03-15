@@ -18,8 +18,7 @@ const Proyect = () => (
     <Container>
       <Title>Snake game</Title>
       <P>
-        <Badge>Snake game</Badge> El clásico juego de mi infancia de la viborita
-        realizado con java script
+        <Badge>Snake game</Badge> El clásico juego de la viborita
       </P>
       <List ml={4} my={4}>
         <ListItem>
@@ -34,7 +33,7 @@ const Proyect = () => (
         </ListItem>
         <ListItem>
           <Meta>Stack</Meta>
-          <span>HTML, JS</span>
+          <span>HTML, JS, CSS</span>
         </ListItem>
         <ListItem>
           <Meta>

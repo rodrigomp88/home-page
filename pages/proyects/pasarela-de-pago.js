@@ -34,7 +34,7 @@ const Proyect = () => (
         </ListItem>
         <ListItem>
           <Meta>Stack</Meta>
-          <span>React, Tailwindcss</span>
+          <span>Next.js, Tailwindcss</span>
         </ListItem>
         <ListItem>
           <Meta>

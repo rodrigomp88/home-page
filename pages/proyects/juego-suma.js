@@ -19,8 +19,8 @@ const Proyect = () => (
     <Container>
       <Title>Juego suma</Title>
       <P>
-        <Badge>Juego suma</Badge> juego de suma para niños, realizado con
-        cariño, para mi sobrino
+        <Badge>Juego suma</Badge> juego de suma para niños, realizado con cariño
+        para los niños de mi familia.
       </P>
       <List ml={4} my={4}>
         <ListItem>
@@ -49,9 +49,10 @@ const Proyect = () => (
         <Center>Screenshots</Center>
       </Heading>
 
+      <WorkImage src="/images/proyects/juego-suma.png" alt="juego suma" />
       <SimpleGrid columns={2} gap={2}>
-        <WorkImage src="/images/proyects/juego-suma.png" alt="juego suma" />
         <WorkImage src="/images/proyects/juego-suma-0.png" alt="juego suma" />
+        <WorkImage src="/images/proyects/juego-suma-1.png" alt="juego suma" />
       </SimpleGrid>
     </Container>
   </Layout>

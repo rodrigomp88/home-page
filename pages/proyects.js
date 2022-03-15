@@ -64,7 +64,7 @@ const Proyects = () => (
             thumbnail={thumbMemoramaNumber}
             title="Memorama 1.0"
           >
-            Memorama 1.0
+            Juego de memoria con números
           </WorkGridItem>
         </Section>
         <Section delay={0.5}>
@@ -73,7 +73,7 @@ const Proyects = () => (
             thumbnail={thumbMemorama}
             title="Memorama"
           >
-            Juego de memoria
+            Juego de memoria con íconos
           </WorkGridItem>
         </Section>
         <Section delay={0.5}>
@@ -82,7 +82,7 @@ const Proyects = () => (
             thumbnail={thumbJuegoSuma}
             title="Juego suma"
           >
-            Juego de suma para niños
+            Juego de suma didáctico, para niños
           </WorkGridItem>
         </Section>
         <Section delay={0.5}>
@@ -91,7 +91,7 @@ const Proyects = () => (
             thumbnail={thumbSnakeGame}
             title="Snake game"
           >
-            El clasico juego de la viborita
+            El clásico juego de la viborita
           </WorkGridItem>
         </Section>
       </SimpleGrid>

@@ -6,6 +6,7 @@ import {
   FormControl,
   FormLabel,
   Input,
+  Textarea,
   VStack
 } from '@chakra-ui/react'
 
@@ -21,8 +22,8 @@ export default function contact() {
   //   }
   // })
   return (
-    <Flex bg="gray.100" align="center" justify="center" h="100vh">
-      <Box bg="white" p={6} rounded="md">
+    <Flex align="center" justify="center" h="100vh">
+      <Box p={6} rounded="md">
         <form
           // onSubmit={formik.handleSubmit}
           name="contact"
@@ -46,7 +47,18 @@ export default function contact() {
               <Input
                 id="name"
                 name="name"
-                type="name"
+                type="text"
+                variant="filled"
+                // onChange={formik.handleChange}
+                // value={formik.values.name}
+              />
+            </FormControl>
+            <FormControl>
+              <FormLabel htmlFor="message">message</FormLabel>
+              <Textarea
+                id="message"
+                name="message"
+                type="text"
                 variant="filled"
                 // onChange={formik.handleChange}
                 // value={formik.values.name}

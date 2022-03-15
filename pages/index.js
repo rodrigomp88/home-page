@@ -91,7 +91,7 @@ const Home = () => (
         textAlign="center"
         bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
       >
-        Hi, Soy desarrollador web!
+        Hola, Soy desarrollador web!
       </Box>
 
       <Section delay={0.1}>

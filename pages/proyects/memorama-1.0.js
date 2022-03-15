@@ -19,9 +19,11 @@ const Proyect = () => (
     <Container>
       <Title>Memorama 1.0</Title>
       <P>
-        <Badge>Memorama 1.0</Badge> juego de memoria de numeros. Al final
-        muestra la cantidas de aciertos, el tiempo tomado y los movimientos
-        realizados
+        <Badge>Memorama 1.0</Badge> juego de memoria con números.
+      </P>
+      <P>
+        Al final muestra la cantidas de aciertos, el tiempo tomado y los
+        movimientos realizados.
       </P>
       <List ml={4} my={4}>
         <ListItem>
@@ -55,6 +57,7 @@ const Proyect = () => (
       <Heading as="h4" fontSize={16} my={6}>
         <Center>Screenshots</Center>
       </Heading>
+      <WorkImage src="/images/proyects/memorama-1.0.png" alt="memorama-1.0" />
       <SimpleGrid columns={2} gap={2}>
         <WorkImage
           src="/images/proyects/memorama-1.0-1.jpeg"
@@ -65,7 +68,6 @@ const Proyect = () => (
           alt="memorama-1.0"
         />
       </SimpleGrid>
-      <WorkImage src="/images/proyects/memorama-1.0.png" alt="memorama-1.0" />
     </Container>
   </Layout>
 )
