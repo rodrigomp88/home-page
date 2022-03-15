@@ -30,6 +30,7 @@ export default function contact() {
           method="POST"
           data-netlify="true"
         >
+          <input type="hidden" name="form-name" value="contact" />
           <VStack spacing={4} align="flex-start">
             <FormControl>
               <FormLabel htmlFor="email">Email Address</FormLabel>
