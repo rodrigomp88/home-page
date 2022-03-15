@@ -1,5 +1,6 @@
-// import { useFormik } from 'formik'
 import {
+  Container,
+  Heading,
   Box,
   Button,
   Flex,
@@ -7,70 +8,65 @@ import {
   FormLabel,
   Input,
   Textarea,
-  VStack
+  VStack,
+  Text
 } from '@chakra-ui/react'
+import Layout from '../components/layouts/article'
 
-export default function contact() {
-  // const formik = useFormik({
-  //   initialValues: {
-  //     email: '',
-  //     name: '',
-  //     rememberMe: false
-  //   },
-  //   onSubmit: values => {
-  //     alert(JSON.stringify(values, null, 2))
-  //   }
-  // })
+const Contact = () => {
   return (
-    <Flex align="center" justify="center" h="100vh">
-      <Box p={6} rounded="md">
-        <form
-          // onSubmit={formik.handleSubmit}
-          name="contact"
-          method="POST"
-          data-netlify="true"
-        >
-          <input type="hidden" name="form-name" value="contact" />
-          <VStack spacing={4} align="flex-start">
-            <FormControl>
-              <FormLabel htmlFor="email">Email Address</FormLabel>
-              <Input
-                id="email"
-                name="email"
-                type="email"
-                variant="filled"
-                // onChange={formik.handleChange}
-                // value={formik.values.email}
-              />
-            </FormControl>
-            <FormControl>
-              <FormLabel htmlFor="name">name</FormLabel>
-              <Input
-                id="name"
-                name="name"
-                type="text"
-                variant="filled"
-                // onChange={formik.handleChange}
-                // value={formik.values.name}
-              />
-            </FormControl>
-            <FormControl>
-              <FormLabel htmlFor="message">message</FormLabel>
-              <Textarea
-                id="message"
-                name="message"
-                type="text"
-                variant="filled"
-                // onChange={formik.handleChange}
-                // value={formik.values.name}
-              />
-            </FormControl>
-            <Button type="submit" colorScheme="purple" isFullWidth>
-              Enviar
-            </Button>
-          </VStack>
-        </form>
-      </Box>
-    </Flex>
+    <Layout title="Contacto">
+      <Container h="100%">
+        <Heading as="h1" fontSize={25} mb={4}>
+          Formulario de contacto
+        </Heading>
+        <Text>
+          Por favor, póngase en contacto conmigo a traves del siguiente
+          formulario de contacto
+        </Text>
+        <Flex align="center" justify="center">
+          <Box p={8} rounded="md">
+            <form
+              name="contact"
+              action="/pages/success"
+              method="POST"
+              data-netlify-recaptcha="true"
+              data-netlify="true"
+            >
+              <input type="hidden" name="form-name" value="contact" />
+              <VStack spacing={4} align="flex-start">
+                <FormControl>
+                  <FormLabel htmlFor="name">Nombre</FormLabel>
+                  <Input id="name" name="name" type="text" variant="filled" />
+                </FormControl>
+                <FormControl>
+                  <FormLabel htmlFor="email">Correo</FormLabel>
+                  <Input
+                    id="email"
+                    name="email"
+                    type="email"
+                    variant="filled"
+                  />
+                </FormControl>
+                <FormControl>
+                  <FormLabel htmlFor="message">Mensaje</FormLabel>
+                  <Textarea
+                    id="message"
+                    name="message"
+                    type="text"
+                    variant="filled"
+                  />
+                </FormControl>
+                <div data-netlify-recaptcha="true"></div>
+                <Button type="submit" colorScheme="teal" isFullWidth>
+                  Enviar
+                </Button>
+              </VStack>
+            </form>
+          </Box>
+        </Flex>
+      </Container>
+    </Layout>
   )
 }
+export default Contact
