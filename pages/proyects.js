@@ -6,6 +6,7 @@ import { WorkGridItem } from '../components/grid-item'
 import thumbListaGasto from '../public/images/proyects/lista-gastos.png'
 import thumbPasarela from '../public/images/proyects/stripe-mercado-pago.png'
 import thumbMemorama from '../public/images/proyects/memorama.png'
+import thumbMemoramaNumber from '../public/images/proyects/memorama-1.0.png'
 import thumbJuegoSuma from '../public/images/proyects/juego-suma.png'
 import thumbSnakeGame from '../public/images/proyects/snake-game.png'
 
@@ -57,6 +58,15 @@ const Proyects = () => (
       </Section>
 
       <SimpleGrid columns={[1, 1, 2]} gap={6}>
+        <Section delay={0.5}>
+          <WorkGridItem
+            id="memorama-1.0"
+            thumbnail={thumbMemoramaNumber}
+            title="Memorama 1.0"
+          >
+            Memorama 1.0
+          </WorkGridItem>
+        </Section>
         <Section delay={0.5}>
           <WorkGridItem
             id="memorama"
