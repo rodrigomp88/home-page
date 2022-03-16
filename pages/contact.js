@@ -29,6 +29,7 @@ const Contact = () => {
             <form
               name="contact"
               // action="/pages/success"
+              data-netlify-recaptcha="true"
               method="POST"
               data-netlify="true"
             >
@@ -56,6 +57,7 @@ const Contact = () => {
                     variant="filled"
                   />
                 </FormControl>
+                <div data-netlify-recaptcha="true"></div>
                 <Button type="submit" colorScheme="teal" isFullWidth>
                   Enviar
                 </Button>
