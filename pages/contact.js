@@ -16,7 +16,7 @@ import Layout from '../components/layouts/article'
 const Contact = () => {
   return (
     <Layout title="Contacto">
-      <Container h="100%">
+      <Container>
         <Heading as="h1" fontSize={25} mb={4}>
           Formulario de contacto
         </Heading>
@@ -30,7 +30,8 @@ const Contact = () => {
               name="contact"
               action="/pages/success"
               method="POST"
-              data-netlify-recaptcha="true"
+              // netlify-honeypot="bot-field"
+              // data-netlify-recaptcha="true"
               data-netlify="true"
             >
               <input type="hidden" name="form-name" value="contact" />
@@ -57,7 +58,7 @@ const Contact = () => {
                     variant="filled"
                   />
                 </FormControl>
-                <div data-netlify-recaptcha="true"></div>
+                {/* <div data-netlify-recaptcha="true"></div> */}
                 <Button type="submit" colorScheme="teal" isFullWidth>
                   Enviar
                 </Button>
