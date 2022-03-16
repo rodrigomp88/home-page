@@ -28,7 +28,6 @@ const Contact = () => {
           <Box p={8} rounded="md">
             <form
               name="contact"
-              // action="/pages/success"
               data-netlify-recaptcha="true"
               method="POST"
               data-netlify="true"
@@ -41,21 +40,11 @@ const Contact = () => {
                 </FormControl>
                 <FormControl>
                   <FormLabel htmlFor="email">Correo</FormLabel>
-                  <Input
-                    // id="email"
-                    name="email"
-                    type="email"
-                    variant="filled"
-                  />
+                  <Input name="email" type="email" variant="filled" />
                 </FormControl>
                 <FormControl>
                   <FormLabel htmlFor="message">Mensaje</FormLabel>
-                  <Textarea
-                    // id="message"
-                    name="message"
-                    type="text"
-                    variant="filled"
-                  />
+                  <Textarea name="message" type="text" variant="filled" />
                 </FormControl>
                 <div data-netlify-recaptcha="true"></div>
                 <Button type="submit" colorScheme="teal" isFullWidth>
