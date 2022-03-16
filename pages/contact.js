@@ -28,10 +28,8 @@ const Contact = () => {
           <Box p={8} rounded="md">
             <form
               name="contact"
-              action="/pages/success"
+              // action="/pages/success"
               method="POST"
-              // netlify-honeypot="bot-field"
-              // data-netlify-recaptcha="true"
               data-netlify="true"
             >
               <input type="hidden" name="form-name" value="contact" />
@@ -43,7 +41,7 @@ const Contact = () => {
                 <FormControl>
                   <FormLabel htmlFor="email">Correo</FormLabel>
                   <Input
-                    id="email"
+                    // id="email"
                     name="email"
                     type="email"
                     variant="filled"
@@ -52,13 +50,12 @@ const Contact = () => {
                 <FormControl>
                   <FormLabel htmlFor="message">Mensaje</FormLabel>
                   <Textarea
-                    id="message"
+                    // id="message"
                     name="message"
                     type="text"
                     variant="filled"
                   />
                 </FormControl>
-                {/* <div data-netlify-recaptcha="true"></div> */}
                 <Button type="submit" colorScheme="teal" isFullWidth>
                   Enviar
                 </Button>
