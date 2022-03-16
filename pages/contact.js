@@ -21,17 +21,12 @@ const Contact = () => {
           Formulario de contacto
         </Heading>
         <Text>
-          Por favor, póngase en contacto conmigo a traves del siguiente
-          formulario de contacto
+          Póngase en contacto a traves del siguiente formulario de contacto.
+          Cualquier consulta o sugerencia seran bienvenidas
         </Text>
         <Flex align="center" justify="center">
           <Box p={8} rounded="md">
-            <form
-              name="contact"
-              data-netlify-recaptcha="true"
-              method="POST"
-              data-netlify="true"
-            >
+            <form name="contact" method="POST" data-netlify="true">
               <input type="hidden" name="form-name" value="contact" />
               <VStack spacing={4} align="flex-start">
                 <FormControl>
@@ -46,7 +41,6 @@ const Contact = () => {
                   <FormLabel htmlFor="message">Mensaje</FormLabel>
                   <Textarea name="message" type="text" variant="filled" />
                 </FormControl>
-                <div data-netlify-recaptcha="true"></div>
                 <Button type="submit" colorScheme="teal" isFullWidth>
                   Enviar
                 </Button>
