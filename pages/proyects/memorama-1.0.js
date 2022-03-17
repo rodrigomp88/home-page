@@ -19,11 +19,9 @@ const Proyect = () => (
     <Container>
       <Title>Memorama 1.0</Title>
       <P>
-        <Badge>Memorama 1.0</Badge> juego de memoria con números.
-      </P>
-      <P>
-        Al final muestra la cantidas de aciertos, el tiempo tomado y los
-        movimientos realizados.
+        <Badge>Memorama 1.0</Badge> juego de memoria con números, cuenta con un
+        contador regresivo de 30 segundos y cantidad de intentos realizados, al
+        final podra ver sus resultados.
       </P>
       <List ml={4} my={4}>
         <ListItem>

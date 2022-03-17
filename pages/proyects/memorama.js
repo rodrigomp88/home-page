@@ -18,7 +18,7 @@ const Proyect = () => (
     <Container>
       <Title>Memorama</Title>
       <P>
-        <Badge>Memorama</Badge> juego de memoria para pasar el rato
+        <Badge>Memorama</Badge> juego de memoria con iconos, para pasar el rato.
       </P>
       <List ml={4} my={4}>
         <ListItem>

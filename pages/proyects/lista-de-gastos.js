@@ -20,13 +20,15 @@ const Proyect = () => (
       <Title>Lista de gastos</Title>
       <P>
         <Badge>Lista de gastos</Badge> es una aplicación para controlar egresos
-        e ingresos mensuales, de distintos tipos de servicios y productos
+        e ingresos mensuales de distintos tipos de servicios y productos
         adquiridos o gastados a lo largo de cada mes.
       </P>
       <P>
-        La aplicaión cuenta con dos secciones: una para visualizar el historial
-        de todos los ingresos y egresos realizados, y la segunda para observar
-        las categorias de los distintos tipos de egresos
+        La aplicaión cuenta con un login para registar usuarios nuevos y
+        mantener una sesion. Dentro de la app se divide en dos secciones, Egreso
+        e Ingreso, dentro de cualquiera de las dos opciones podra visualizar el
+        historial de todos los ingresos y egresos realizados, y la segunda para
+        observar las categorias de los distintos tipos de egresos.
       </P>
       <List ml={4} my={4}>
         <ListItem>
@@ -38,7 +40,7 @@ const Proyect = () => (
         </ListItem>
         <ListItem>
           <Meta>Stack</Meta>
-          <span>React, Firebase, Styled Components</span>
+          <span>React, Firebase, Styled-Components</span>
         </ListItem>
         <ListItem>
           <Meta>

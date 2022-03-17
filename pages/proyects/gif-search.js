@@ -4,8 +4,8 @@ import {
   Link,
   List,
   ListItem,
-  Center,
-  Heading
+  Heading,
+  Center
 } from '@chakra-ui/react'
 import { IoLogoGithub } from 'react-icons/io5'
 import Layout from '../../components/layouts/article'
@@ -14,18 +14,21 @@ import { Title, WorkImage, Meta } from '../../components/work'
 import P from '../../components/paragraph'
 
 const Proyect = () => (
-  <Layout title="Pasarela de pago">
+  <Layout title="Gif Search">
     <Container>
-      <Title>Pasarela de pago</Title>
+      <Title>Gif Search</Title>
       <P>
-        <Badge>Pasarela de pago</Badge> componente realizado para entender el
-        funcionamiento de la pasarela de pago de Mercado pago y Stripe.
+        <Badge>Gif Search</Badge> buscador de gifs con la api de GYPHY.
+      </P>
+      <P>
+        Busque los gif que desee ver, no me hago responsable por los resultados
+        inadecuados o fuera de lugar que muestre la app.
       </P>
       <List ml={4} my={4}>
         <ListItem>
           <Meta>URL</Meta>
           <Link
-            href="https://sistema-mercado-pago-stripe-r3zj8z2ot-rodrigomp88.vercel.app/"
+            href="https://rodrigomp88.github.io/gif-search/"
             target="_blank"
           >
             View online demo
@@ -34,14 +37,14 @@ const Proyect = () => (
         </ListItem>
         <ListItem>
           <Meta>Stack</Meta>
-          <span>Next.js, Tailwindcss</span>
+          <span>React</span>
         </ListItem>
         <ListItem>
           <Meta>
             <IoLogoGithub />
           </Meta>
           <Link
-            href="https://github.com/rodrigomp88/sistema-mercadoPago-stripe"
+            href="https://github.com/rodrigomp88/gif-search"
             target="_blank"
           >
             View code
@@ -53,11 +56,7 @@ const Proyect = () => (
       <Heading as="h4" fontSize={16} my={6}>
         <Center>Screenshot</Center>
       </Heading>
-
-      <WorkImage
-        src="/images/proyects/stripe-mercado-pago.png"
-        alt="pasarela-de-pago"
-      />
+      <WorkImage src="/images/proyects/gif-search.png" alt="gif-search" />
     </Container>
   </Layout>
 )

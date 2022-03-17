@@ -18,7 +18,8 @@ const Proyect = () => (
     <Container>
       <Title>Snake game</Title>
       <P>
-        <Badge>Snake game</Badge> El clásico juego de la viborita
+        <Badge>Snake game</Badge> El clásico juego de la viborita con un score
+        para ver cuantos puntos se va realizando.
       </P>
       <List ml={4} my={4}>
         <ListItem>

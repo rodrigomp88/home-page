@@ -6,6 +6,7 @@ import { WorkGridItem } from '../components/grid-item'
 import thumbListaGasto from '../public/images/proyects/lista-gastos.png'
 import thumbPasarela from '../public/images/proyects/stripe-mercado-pago.png'
 import thumbMemorama from '../public/images/proyects/memorama.png'
+import thumbGifSearch from '../public/images/proyects/gif-search.png'
 import thumbMemoramaNumber from '../public/images/proyects/memorama-1.0.png'
 import thumbJuegoSuma from '../public/images/proyects/juego-suma.png'
 import thumbSnakeGame from '../public/images/proyects/snake-game.png'
@@ -65,6 +66,16 @@ const Proyects = () => (
             title="Memorama 1.0"
           >
             Juego de memoria con números
+          </WorkGridItem>
+        </Section>
+
+        <Section delay={0.5}>
+          <WorkGridItem
+            id="gif-search"
+            thumbnail={thumbGifSearch}
+            title="Gif search"
+          >
+            Busqueda de gifs con la api de GIPHY
           </WorkGridItem>
         </Section>
         <Section delay={0.5}>

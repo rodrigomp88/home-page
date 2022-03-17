@@ -20,7 +20,8 @@ const Proyect = () => (
       <Title>Juego suma</Title>
       <P>
         <Badge>Juego suma</Badge> juego de suma para niños, realizado con cariño
-        para los niños de mi familia.
+        para los menores de mi familia u calquier otra persona que desee
+        aprender a sumar.
       </P>
       <List ml={4} my={4}>
         <ListItem>
