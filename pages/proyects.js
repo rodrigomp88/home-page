@@ -5,6 +5,7 @@ import { WorkGridItem } from '../components/grid-item'
 
 import thumbListaGasto from '../public/images/proyects/lista-gastos.png'
 import thumbPasarela from '../public/images/proyects/stripe-mercado-pago.png'
+import thumbShopAdmin from '../public/images/proyects/react-shop-admin.png'
 import thumbMemorama from '../public/images/proyects/memorama.png'
 import thumbGifSearch from '../public/images/proyects/gif-search.png'
 import thumbMemoramaNumber from '../public/images/proyects/memorama-1.0.png'
@@ -46,6 +47,16 @@ const Proyects = () => (
             title="Pasarela de pago"
           >
             Pasarela de pago integrada con Mercado pago y Stripe
+          </WorkGridItem>
+        </Section>
+
+        <Section delay={0.3}>
+          <WorkGridItem
+            id="react-shop-admin"
+            thumbnail={thumbShopAdmin}
+            title="Reac shop admin"
+          >
+            Crud de datos con api
           </WorkGridItem>
         </Section>
       </SimpleGrid>
