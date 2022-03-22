@@ -99,11 +99,13 @@ const Home = () => (
           About
         </Heading>
         <Paragraph>
-          Hola! soy Rodrigo, desarrollador web de Argentina. Me gusta aprender
-          nuevas tecnologías, construir servicios digitales, desde el diseño
-          amigable de interfaces a modelado de datos. En mis tiempos libres me
-          gusta hacer juegos web, mirar tutoriales, hacer ejercicios y compartir
-          con amigos.
+          Hola! soy Rodrigo, desarrollador web de Argentina, Mendoza. Me gusta
+          aprender nuevas tecnologías, construir servicios web, desde el diseño
+          amigable a modelado de datos. Apasionado por las tecnologias, en mi
+          tiempo libre me gusta hacer juegos web, mirar tutoriales, aprender
+          nuevos lenguajes de programación e implementaciones de apis, además de
+          estar frente a una pantalla me gusta hacer ejercicios fisico
+          (Ciclismo/gimnasio/senderismo) y compartir con familia e amigos.
         </Paragraph>
       </Section>
 
@@ -132,14 +134,25 @@ const Home = () => (
 
       <Section delay={0.3}>
         <Heading as="h3" variant="section-title">
-          I ♥
+          Me gusta ♥
         </Heading>
-        <Paragraph>Arte, Musica, Dibujar, Fotografía, juegos</Paragraph>
+        <Paragraph>
+          Arte, Musica, Dibujar, Fotografía, Juegos, Deportes
+        </Paragraph>
       </Section>
 
       <Section delay={0.4}>
         <Heading as="h3" variant="section-title">
-          Follow me
+          Habilidades
+        </Heading>
+        <Paragraph>
+          React, JavaScript, Node, MySql, Firebase, HTML, CSS
+        </Paragraph>
+      </Section>
+
+      <Section delay={0.5}>
+        <Heading as="h3" variant="section-title">
+          Sigueme en la web
         </Heading>
         <List>
           <ListItem>
