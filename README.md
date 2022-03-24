@@ -8,4 +8,5 @@ Next.js, ChakraUi
 
 ## Description 📜
 
-Portfolio personal sobre mi y los proyectos realizados, los trabajos realilzados, no los agrego aqui, por cuestiones de seguridad.
+Portfolio personal sobre mi y los proyectos realizados. 
+Los trabajos realilzados no los agrego aqui, por cuestiones de seguridad.
