@@ -22,7 +22,7 @@ import { SlideData } from '../data/slide-data'
 
 const Home = () => (
   <Layout>
-    <Container mt={8}>
+    <Container mt={8} delay={0.5}>
       <ImageSlider slides={SlideData} />
       <Box align="center" my={4} mb={6}>
         <NextLink href="/proyects">
