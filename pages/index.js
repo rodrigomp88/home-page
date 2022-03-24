@@ -5,7 +5,6 @@ import {
   Heading,
   Box,
   Image,
-  SimpleGrid,
   Button,
   List,
   ListItem,
@@ -17,30 +16,14 @@ import Paragraph from '../components/paragraph'
 import { BioSection, BioYear } from '../components/bio'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
-import { GridItem } from '../components/grid-item'
 import { IoLogoLinkedin, IoLogoGithub } from 'react-icons/io5'
-import thumbListaGasto from '../public/images/proyects/lista-gastos.png'
-import thumbPago from '../public/images/proyects/stripe-mercado-pago.png'
+import ImageSlider from '../components/image-slider'
+import { SlideData } from '../data/slide-data'
 
 const Home = () => (
   <Layout>
-    <Container>
-      <SimpleGrid columns={[1, 2, 2]} gap={6} m={6}>
-        <GridItem
-          href="https://lista-gasto.web.app/"
-          title="Lista gastos"
-          thumbnail={thumbListaGasto}
-        >
-          Aplicación de gastos mensuales
-        </GridItem>
-        <GridItem
-          href="https://sistema-mercado-pago-stripe-r3zj8z2ot-rodrigomp88.vercel.app/"
-          title="Pasarela de pago"
-          thumbnail={thumbPago}
-        >
-          Mercado pago y Stripe
-        </GridItem>
-      </SimpleGrid>
+    <Container mt={8}>
+      <ImageSlider slides={SlideData} />
       <Box align="center" my={4} mb={6}>
         <NextLink href="/proyects">
           <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
@@ -145,9 +128,7 @@ const Home = () => (
         <Heading as="h3" variant="section-title">
           Habilidades
         </Heading>
-        <Paragraph>
-          React, JavaScript, Node, MySql, Firebase, HTML, CSS
-        </Paragraph>
+        <Paragraph>React, JavaScript, Node, MySql, Firebase</Paragraph>
       </Section>
 
       <Section delay={0.5}>
