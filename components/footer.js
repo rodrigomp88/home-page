@@ -1,10 +1,12 @@
-import { Box, Badge } from '@chakra-ui/react'
+import { Box, Text, Badge } from '@chakra-ui/react'
 
 const Footer = () => {
   return (
     <Box align="center" opacity={0.4} fontSize="sm">
-      <Badge>Hecho con ♥ con Next.js | Chakra.ui</Badge>
-      &copy; {new Date().getFullYear()} Pinea Rodrigo. All Rights Reserved.
+      <Badge mt={4}>Hecho con | Next.js | Chakra.ui</Badge>
+      <Text mt={4}>
+        &copy; {new Date().getFullYear()} Pinea Rodrigo. All Rights Reserved.
+      </Text>
     </Box>
   )
 }

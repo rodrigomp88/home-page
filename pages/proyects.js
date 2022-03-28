@@ -11,16 +11,24 @@ import thumbGifSearch from '../public/images/proyects/gif-search.png'
 import thumbMemoramaNumber from '../public/images/proyects/memorama-1.0.png'
 import thumbJuegoSuma from '../public/images/proyects/juego-suma.png'
 import thumbSnakeGame from '../public/images/proyects/snake-game.png'
+import thumbEnviarMailJs from '../public/images/proyects/formulario-envio-email-js.png'
+import thumbFiltrarBusquedaJs from '../public/images/proyects/buscador-autos-por-filtro-js.png'
+import thumbToDoListJs from '../public/images/proyects/todo-list-js.png'
+import thumbCarritoCompraJs from '../public/images/proyects/carrito-compra-js.png'
+import thumbCotizadorSegurosJs from '../public/images/proyects/cotizador-seguros-js.png'
+import thumbGastosSemanalesJs from '../public/images/proyects/gastos-semanales-js.png'
 
 const Proyects = () => (
   <Layout title="Proyectos">
     <Container>
-      <Heading as="h3" fontSize={20} mb={4}>
-        Aplicaciones
-      </Heading>
+      <Section delay={0.1}>
+        <Heading as="h3" fontSize={20} mb={4}>
+          Aplicaciones
+        </Heading>
+      </Section>
 
       <SimpleGrid columns={[1, 1, 2]} gap={6}>
-        <Section delay={0.1}>
+        <Section delay={0.2}>
           <WorkGridItem
             id="lista-de-gastos"
             title="Lista de gastos"
@@ -31,16 +39,76 @@ const Proyects = () => (
         </Section>
       </SimpleGrid>
 
-      <Section delay={0.2}>
+      <Section delay={0.3}>
         <Divider my={6} />
 
         <Heading as="h3" fontSize={20} mb={4}>
-          Componentes
+          Otros
         </Heading>
       </Section>
 
-      <SimpleGrid columns={[1, 1, 2]} gap={6}>
-        <Section delay={0.3}>
+      <SimpleGrid columns={[2, 2, 3]} gap={6}>
+        <Section delay={0.4}>
+          <WorkGridItem
+            id="gastos-semanales-js"
+            thumbnail={thumbGastosSemanalesJs}
+            title="Gastos semanales"
+          >
+            Control de gastos semanales
+          </WorkGridItem>
+        </Section>
+
+        <Section delay={0.4}>
+          <WorkGridItem
+            id="cotizador-seguros-js"
+            thumbnail={thumbCotizadorSegurosJs}
+            title="Cotizador de seguros"
+          >
+            Cotiza tu seguro de automovil
+          </WorkGridItem>
+        </Section>
+
+        <Section delay={0.4}>
+          <WorkGridItem
+            id="carrito-compra-js"
+            thumbnail={thumbCarritoCompraJs}
+            title="Carrito de compra"
+          >
+            Guardar cursos en el carrito con localStorage
+          </WorkGridItem>
+        </Section>
+
+        <Section delay={0.4}>
+          <WorkGridItem
+            id="todo-list-js"
+            thumbnail={thumbToDoListJs}
+            title="ToDo List"
+          >
+            Guardar notas en localStorage
+          </WorkGridItem>
+        </Section>
+
+        <Section delay={0.4}>
+          <WorkGridItem
+            id="buscador-autos-por-filtro-js"
+            thumbnail={thumbFiltrarBusquedaJs}
+            title="Buscador de auto por filtro"
+          >
+            Filtrar busqueda por propiedades
+          </WorkGridItem>
+        </Section>
+
+        <Section delay={0.4}>
+          <WorkGridItem
+            id="formulario-envio-email-js"
+            thumbnail={thumbEnviarMailJs}
+            title="Formulario enviar email"
+          >
+            Formulario para el envio de emails
+          </WorkGridItem>
+        </Section>
+
+        <Section delay={0.4}>
           <WorkGridItem
             id="pasarela-de-pago"
             thumbnail={thumbPasarela}
@@ -50,7 +118,7 @@ const Proyects = () => (
           </WorkGridItem>
         </Section>
 
-        <Section delay={0.3}>
+        <Section delay={0.4}>
           <WorkGridItem
             id="react-shop-admin"
             thumbnail={thumbShopAdmin}
@@ -59,18 +127,8 @@ const Proyects = () => (
             Crud de datos con api
           </WorkGridItem>
         </Section>
-      </SimpleGrid>
 
-      <Section delay={0.4}>
-        <Divider my={6} />
-
-        <Heading as="h3" fontSize={20} mb={4}>
-          Otros
-        </Heading>
-      </Section>
-
-      <SimpleGrid columns={[1, 1, 2]} gap={6}>
-        <Section delay={0.5}>
+        <Section delay={0.4}>
           <WorkGridItem
             id="memorama-1.0"
             thumbnail={thumbMemoramaNumber}
@@ -80,7 +138,7 @@ const Proyects = () => (
           </WorkGridItem>
         </Section>
 
-        <Section delay={0.5}>
+        <Section delay={0.4}>
           <WorkGridItem
             id="gif-search"
             thumbnail={thumbGifSearch}
@@ -89,7 +147,7 @@ const Proyects = () => (
             Busqueda de gifs con la api de GIPHY
           </WorkGridItem>
         </Section>
-        <Section delay={0.5}>
+        <Section delay={0.4}>
           <WorkGridItem
             id="memorama"
             thumbnail={thumbMemorama}
@@ -98,7 +156,7 @@ const Proyects = () => (
             Juego de memoria con íconos
           </WorkGridItem>
         </Section>
-        <Section delay={0.5}>
+        <Section delay={0.4}>
           <WorkGridItem
             id="juego-suma"
             thumbnail={thumbJuegoSuma}
@@ -107,7 +165,7 @@ const Proyects = () => (
             Juego de suma didáctico, para niños
           </WorkGridItem>
         </Section>
-        <Section delay={0.5}>
+        <Section delay={0.4}>
           <WorkGridItem
             id="snake-game"
             thumbnail={thumbSnakeGame}
