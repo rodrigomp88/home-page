@@ -17,6 +17,8 @@ import thumbToDoListJs from '../public/images/proyects/todo-list-js.png'
 import thumbCarritoCompraJs from '../public/images/proyects/carrito-compra-js.png'
 import thumbCotizadorSegurosJs from '../public/images/proyects/cotizador-seguros-js.png'
 import thumbGastosSemanalesJs from '../public/images/proyects/gastos-semanales-js.png'
+import thumbAdministraPacientesJs from '../public/images/proyects/administra-pacientes-js.png'
+import thumbAdministraClientesJs from '../public/images/proyects/administra-clientes-js.png'
 
 const Proyects = () => (
   <Layout title="Proyectos">
@@ -48,6 +50,26 @@ const Proyects = () => (
       </Section>
 
       <SimpleGrid columns={[2, 2, 3]} gap={6}>
+        <Section delay={0.4}>
+          <WorkGridItem
+            id="administra-clientes-js"
+            thumbnail={thumbAdministraClientesJs}
+            title="Administra clientes"
+          >
+            CRUD de clientes en indexDB
+          </WorkGridItem>
+        </Section>
+
+        <Section delay={0.4}>
+          <WorkGridItem
+            id="administra-pacientes-js"
+            thumbnail={thumbAdministraPacientesJs}
+            title="Administra pacientes"
+          >
+            CRUD de paceintes de veterinaria
+          </WorkGridItem>
+        </Section>
+
         <Section delay={0.4}>
           <WorkGridItem
             id="gastos-semanales-js"

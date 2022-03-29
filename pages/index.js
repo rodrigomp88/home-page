@@ -9,7 +9,8 @@ import {
   List,
   ListItem,
   Icon,
-  useColorModeValue
+  useColorModeValue,
+  UnorderedList
 } from '@chakra-ui/react'
 import { ChevronRightIcon, ExternalLinkIcon } from '@chakra-ui/icons'
 import Paragraph from '../components/paragraph'
@@ -128,7 +129,15 @@ const Home = () => (
         <Heading as="h3" variant="section-title">
           Habilidades
         </Heading>
-        <Paragraph>React, JavaScript, Node, MySql, Firebase</Paragraph>
+        <UnorderedList>
+          <ListItem>JavaScript</ListItem>
+          <ListItem>HTML</ListItem>
+          <ListItem>CSS</ListItem>
+          <ListItem>React</ListItem>
+          <ListItem>NodeJs</ListItem>
+          <ListItem>MySql</ListItem>
+          <ListItem>MongoDB</ListItem>
+        </UnorderedList>
       </Section>
 
       <Section delay={0.5}>

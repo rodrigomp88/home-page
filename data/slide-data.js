@@ -15,8 +15,18 @@ export const SlideData = [
     descripcion: 'Crud de datos con api'
   },
   {
-    id: 'Gif search',
-    image: '/images/proyects/gif-search.png',
-    descripcion: 'Busqueda de gifs con la api de GIPHY'
+    id: 'Administra clientes',
+    image: '/images/proyects/administra-clientes-js.png',
+    descripcion: 'CRUD de clientes en indexDB'
+  },
+  {
+    id: 'Cotizador seguros',
+    image: '/images/proyects/cotizador-seguros-js.png',
+    descripcion: 'Cotiza tu seguro de automovil'
+  },
+  {
+    id: 'Buscador automoviles',
+    image: '/images/proyects/buscador-autos-por-filtro-js.png',
+    descripcion: 'Filtra busqueda por propiedades'
   }
 ]
