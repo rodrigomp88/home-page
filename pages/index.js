@@ -36,7 +36,7 @@ const Home = () => (
       <Box display={{ md: 'flex' }} mb={2}>
         <Box flexGrow={1}>
           <Heading>Pinea Rodrigo</Heading>
-          <p>( Fron-End / Back-End )</p>
+          <p>( Front-End / Back-End )</p>
           <NextLink href="">
             <Link
               fontWeight="bold"
