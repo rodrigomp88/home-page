@@ -15,7 +15,7 @@ import { IoLogoLinkedin, IoLogoGithub } from 'react-icons/io5'
 const Footer = () => {
   return (
     <Box align="center" opacity={0.4} fontSize="sm">
-      <SimpleGrid row={[2, 2, 2]} gap={6}>
+      <SimpleGrid row={[2]} gap={2}>
         <List>
           <ListItem>
             <Tooltip label="GitHub" placement="top">
