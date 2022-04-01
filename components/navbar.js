@@ -78,7 +78,7 @@ const Navbar = props => {
             Contacto
           </LinkItem>
           <LinkItem
-            _target="_blank"
+            target="_blank"
             href="https://github.com/rodrigomp88/home-page"
             path={path}
             display="inline-flex"
@@ -114,6 +114,7 @@ const Navbar = props => {
                 </NextLink>
                 <MenuItem
                   as={Link}
+                  target="_blank"
                   href="https://github.com/rodrigomp88/home-page"
                   style={{ gap: 4 }}
                 >

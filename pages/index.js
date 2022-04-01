@@ -6,18 +6,16 @@ import {
   Box,
   Image,
   Button,
-  List,
   ListItem,
-  Icon,
   useColorModeValue,
-  UnorderedList
+  UnorderedList,
+  Tooltip
 } from '@chakra-ui/react'
 import { ChevronRightIcon, ExternalLinkIcon } from '@chakra-ui/icons'
 import Paragraph from '../components/paragraph'
 import { BioSection, BioYear } from '../components/bio'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
-import { IoLogoLinkedin, IoLogoGithub } from 'react-icons/io5'
 import ImageSlider from '../components/image-slider'
 import { SlideData } from '../data/slide-data'
 
@@ -55,16 +53,18 @@ const Home = () => (
           ml={{ md: 6 }}
           textAlign="center"
         >
-          <Image
-            borderColor="whiteAlpha.800"
-            borderWidth={2}
-            borderStyle="solid"
-            maxWidth="100px"
-            display="inline-block"
-            borderRadius="full"
-            src="/images/profile-img.jpg"
-            alt="Profile image"
-          />
+          <Tooltip label="OUCH!" placement="left">
+            <Image
+              borderColor="whiteAlpha.800"
+              borderWidth={2}
+              borderStyle="solid"
+              maxWidth="100px"
+              display="inline-block"
+              borderRadius="full"
+              src="/images/profile-img.jpg"
+              alt="Profile image"
+            />
+          </Tooltip>
         </Box>
       </Box>
 
@@ -75,17 +75,8 @@ const Home = () => (
         textAlign="center"
         bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
       >
-        Hola, Soy desarrollador web!
+        JavaScript | React | NodeJs | MySql | MongoDB | NextJs
       </Box>
-
-      <Section delay={0.1}>
-        <Heading as="h3" variant="section-title">
-          Habilidades
-        </Heading>
-        <Paragraph>
-          JavaScript | React | NodeJs | MySql | MongoDB | NextJs | HTML | CSS
-        </Paragraph>
-      </Section>
 
       <Section delay={0.2}>
         <Heading as="h3" variant="section-title">
@@ -93,14 +84,31 @@ const Home = () => (
         </Heading>
         <BioSection>
           <BioYear>2018 - Actualidad</BioYear>
-          Desarrollo web-freelance, identidad. Ayuda con la creación y tutorías
-          para el manejo de correos electrónicos corporativos. Soporte y
-          asesoría para la compra de software para el posicionamiento de
-          unidades (Camiones) y administracion de la empresa.
+          <Paragraph>
+            Desarrollo web-freelance. Ayuda con la creación y tutorías para el
+            manejo de correos electrónicos corporativos. Soporte y asesoría para
+            la compra de software para el posicionamiento de unidades (Camiones)
+            y administracion de la empresa.
+          </Paragraph>
         </BioSection>
       </Section>
 
-      <Section delay={0.2}>
+      <Section delay={0.3}>
+        <Heading as="h3" variant="section-title">
+          Sobre mi
+        </Heading>
+        <Paragraph>
+          Hola! soy Rodrigo, desarrollador web de Argentina, Mendoza. Me gusta
+          aprender nuevas tecnologías, construir servicios web, desde el diseño
+          amigable a modelado de datos. Apasionado por las tecnologias, en mi
+          tiempo libre me gusta hacer juegos web, mirar tutoriales, aprender
+          nuevos lenguajes de programación e implementaciones de apis, además de
+          estar frente a una pantalla me gusta hacer ejercicios fisico
+          (Ciclismo/gimnasio/senderismo) y compartir con familia e amigos.
+        </Paragraph>
+      </Section>
+
+      <Section delay={0.4}>
         <Heading as="h3" variant="section-title">
           Formación
         </Heading>
@@ -115,7 +123,7 @@ const Home = () => (
         </BioSection>
       </Section>
 
-      <Section delay={0.1}>
+      <Section delay={0.5}>
         <Heading as="h3" variant="section-title">
           Cursos
         </Heading>
@@ -154,62 +162,14 @@ const Home = () => (
         </UnorderedList>
       </Section>
 
-      <Section delay={0.3}>
+      <Section delay={0.6}>
         <Heading as="h3" variant="section-title">
-          Sobre mi
+          Aficiones ♥
         </Heading>
-        <Paragraph>
-          Hola! soy Rodrigo, desarrollador web de Argentina, Mendoza. Me gusta
-          aprender nuevas tecnologías, construir servicios web, desde el diseño
-          amigable a modelado de datos. Apasionado por las tecnologias, en mi
-          tiempo libre me gusta hacer juegos web, mirar tutoriales, aprender
-          nuevos lenguajes de programación e implementaciones de apis, además de
-          estar frente a una pantalla me gusta hacer ejercicios fisico
-          (Ciclismo/gimnasio/senderismo) y compartir con familia e amigos.
-        </Paragraph>
+        <Paragraph>Arte, Musica, Fotografía, Juegos, Deportes</Paragraph>
       </Section>
 
-      <Section delay={0.4}>
-        <Heading as="h3" variant="section-title">
-          Me gusta ♥
-        </Heading>
-        <Paragraph>
-          Arte, Musica, Dibujar, Fotografía, Juegos, Deportes
-        </Paragraph>
-      </Section>
-
-      <Section delay={0.5}>
-        <Heading as="h3" variant="section-title">
-          Sigueme en la web
-        </Heading>
-        <List>
-          <ListItem>
-            <Link href="https://github.com/rodrigomp88" target="_blank">
-              <Button
-                variant="ghost"
-                colorScheme="teal"
-                leftIcon={<Icon as={IoLogoGithub} />}
-              >
-                @rodrigomp88
-              </Button>
-            </Link>
-          </ListItem>
-          <ListItem>
-            <Link
-              href="https://www.linkedin.com/in/rodrigo-pinea/"
-              target="_blank"
-            >
-              <Button
-                variant="ghost"
-                colorScheme="teal"
-                leftIcon={<Icon as={IoLogoLinkedin} />}
-              >
-                @rodrigo-pinea
-              </Button>
-            </Link>
-          </ListItem>
-        </List>
-
+      <Section delay={0.7}>
         <Box align="center" my={4}>
           <NextLink href="/contact">
             <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">

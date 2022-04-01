@@ -4,11 +4,6 @@ import {
   Box,
   Button,
   Flex,
-  FormControl,
-  FormLabel,
-  Input,
-  Textarea,
-  VStack,
   Text,
   ListItem,
   List,
@@ -17,6 +12,7 @@ import {
 } from '@chakra-ui/react'
 import { EmailIcon, PhoneIcon } from '@chakra-ui/icons'
 import Layout from '../components/layouts/article'
+import { FormContact } from '../components/form-contact'
 
 const Contact = () => {
   return (
@@ -31,38 +27,8 @@ const Contact = () => {
         </Text>
 
         <Flex align="center" justify="center" mb={8}>
-          <Box p={8} w="100%" rounded="md">
-            <form name="contact" action="../success" method="POST" data-netlify="true">
-              <input type="hidden" name="form-name" value="contact" />
-              <VStack spacing={4} align="flex-start">
-                <FormControl>
-                  <FormLabel htmlFor="name">Nombre</FormLabel>
-                  <Input
-                    id="name"
-                    name="name"
-                    type="text"
-                    required
-                    variant="filled"
-                  />
-                </FormControl>
-                <FormControl>
-                  <FormLabel htmlFor="email">Correo</FormLabel>
-                  <Input name="email" type="email" required variant="filled" />
-                </FormControl>
-                <FormControl>
-                  <FormLabel htmlFor="message">Mensaje</FormLabel>
-                  <Textarea
-                    name="message"
-                    type="text"
-                    required
-                    variant="filled"
-                  />
-                </FormControl>
-                <Button type="submit" colorScheme="teal" isFullWidth>
-                  Enviar
-                </Button>
-              </VStack>
-            </form>
+          <Box p={8} w="80%" rounded="md">
+            <FormContact />
           </Box>
         </Flex>
         <Heading as="h3" variant="section-title">
