@@ -36,7 +36,7 @@ const Home = () => (
       <Box display={{ md: 'flex' }} mb={2}>
         <Box flexGrow={1}>
           <Heading>Pinea Rodrigo</Heading>
-          <p>( Front-End / Back-End )</p>
+          <p>( Desarrollador web )</p>
           <NextLink href="">
             <Link
               fontWeight="bold"
@@ -80,7 +80,83 @@ const Home = () => (
 
       <Section delay={0.1}>
         <Heading as="h3" variant="section-title">
-          About
+          Habilidades
+        </Heading>
+        <Paragraph>
+          JavaScript | React | NodeJs | MySql | MongoDB | NextJs | HTML | CSS
+        </Paragraph>
+      </Section>
+
+      <Section delay={0.2}>
+        <Heading as="h3" variant="section-title">
+          Experiencia
+        </Heading>
+        <BioSection>
+          <BioYear>2018 - Actualidad</BioYear>
+          Desarrollo web-freelance, identidad. Ayuda con la creación y tutorías
+          para el manejo de correos electrónicos corporativos. Soporte y
+          asesoría para la compra de software para el posicionamiento de
+          unidades (Camiones) y administracion de la empresa.
+        </BioSection>
+      </Section>
+
+      <Section delay={0.2}>
+        <Heading as="h3" variant="section-title">
+          Formación
+        </Heading>
+        <BioSection>
+          <BioYear>2017</BioYear>
+          Comienzo estudios de programación en
+          UTN(Universidad-tecnológica-nacional).
+        </BioSection>
+        <BioSection>
+          <BioYear>2020</BioYear>
+          Bootcamp en henry
+        </BioSection>
+      </Section>
+
+      <Section delay={0.1}>
+        <Heading as="h3" variant="section-title">
+          Cursos
+        </Heading>
+        <UnorderedList>
+          <ListItem>
+            La Web Empieza Aquí: TypeScript, Angular , Storage, Firebase (Tomas
+            Garay) Udemy
+          </ListItem>
+          <ListItem>
+            Web Personal MERN Full Stack: MongoDB, Express, React y Node
+            (Agustin Navarro Galdon) Udemy
+          </ListItem>
+          <ListItem>
+            React Native Expo: Creando un TripAdvisor de Restaurantes (Agustin
+            Navarro Galdon) Udemy
+          </ListItem>
+          <ListItem>
+            React De cero a experto (Hooks y MERN) (Fernando Herrera) Udemy
+          </ListItem>
+          <ListItem>
+            React Hooks & Firebase & Material Design Fullstack Extremo (Vaxi
+            Drez, Javier Calizaya Melendrez) Udemy
+          </ListItem>
+          <ListItem>
+            React y Firebase El Curso Completo, Práctico y desde Cero (Carlos
+            Arturo Esparza) Udemy
+          </ListItem>
+          <ListItem>
+            Next JS: Crea tu tienda online completa (Agustin Navarro Galdon)
+            Udemy
+          </ListItem>
+          <ListItem>
+            JavaScript Moderno Guía Definitiva Construye +15 Proyectos (Juan
+            Pablo De la torre Valdez) Udemy
+          </ListItem>
+        </UnorderedList>
+      </Section>
+
+      <Section delay={0.3}>
+        <Heading as="h3" variant="section-title">
+          Sobre mi
         </Heading>
         <Paragraph>
           Hola! soy Rodrigo, desarrollador web de Argentina, Mendoza. Me gusta
@@ -93,51 +169,13 @@ const Home = () => (
         </Paragraph>
       </Section>
 
-      <Section delay={0.2}>
-        <Heading as="h3" variant="section-title">
-          Biografía
-        </Heading>
-        <BioSection>
-          <BioYear>1988</BioYear>
-          Nacido en Mendoza, Argentina.
-        </BioSection>
-        <BioSection>
-          <BioYear>2017</BioYear>
-          Comienzo estudios de programación en
-          UTN(Universidad-tecnológica-nacional).
-        </BioSection>
-        <BioSection>
-          <BioYear>2018</BioYear>
-          Desarrollo de sitios web de manera freelance
-        </BioSection>
-        <BioSection>
-          <BioYear>2020</BioYear>
-          Bootcamp en henry
-        </BioSection>
-      </Section>
-
-      <Section delay={0.3}>
+      <Section delay={0.4}>
         <Heading as="h3" variant="section-title">
           Me gusta ♥
         </Heading>
         <Paragraph>
           Arte, Musica, Dibujar, Fotografía, Juegos, Deportes
         </Paragraph>
-      </Section>
-
-      <Section delay={0.4}>
-        <Heading as="h3" variant="section-title">
-          Habilidades
-        </Heading>
-        <UnorderedList>
-          <ListItem>JavaScript</ListItem>
-          <ListItem>HTML</ListItem>
-          <ListItem>CSS</ListItem>
-          <ListItem>React</ListItem>
-          <ListItem>NodeJs</ListItem>
-          <ListItem>MySql</ListItem>
-          <ListItem>MongoDB</ListItem>
-        </UnorderedList>
       </Section>
 
       <Section delay={0.5}>
