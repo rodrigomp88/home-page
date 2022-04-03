@@ -100,9 +100,7 @@ const Home = () => (
           aprender nuevas tecnologías, construir servicios web, desde el diseño
           amigable a modelado de datos. Apasionado por las tecnologias, en mi
           tiempo libre me gusta hacer juegos web, mirar tutoriales, aprender
-          nuevos lenguajes de programación e implementaciones de apis, además de
-          estar frente a una pantalla me gusta hacer ejercicios fisico
-          (Ciclismo/gimnasio/senderismo) y compartir con familia e amigos.
+          nuevos lenguajes de programación e implementaciones de apis.
         </Paragraph>
       </Section>
 
