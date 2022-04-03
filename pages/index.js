@@ -84,12 +84,10 @@ const Home = () => (
         </Heading>
         <BioSection>
           <BioYear>2018 - Actualidad</BioYear>
-          <Paragraph>
-            Desarrollo web-freelance. Ayuda con la creación y tutorías para el
-            manejo de correos electrónicos corporativos. Soporte y asesoría para
-            la compra de software para el posicionamiento de unidades (Camiones)
-            y administracion de la empresa.
-          </Paragraph>
+          Desarrollo web-freelance, para empresas de mi región. Ayuda con la
+          creación y tutorías para el manejo de correos electrónicos
+          corporativos. Soporte y asesoría para la compra de software para el
+          posicionamiento de unidades (Camiones) y administracion de la empresa.
         </BioSection>
       </Section>
 

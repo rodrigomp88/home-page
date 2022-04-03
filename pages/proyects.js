@@ -19,6 +19,11 @@ import thumbCotizadorSegurosJs from '../public/images/proyects/cotizador-seguros
 import thumbGastosSemanalesJs from '../public/images/proyects/gastos-semanales-js.png'
 import thumbAdministraPacientesJs from '../public/images/proyects/administra-pacientes-js.png'
 import thumbAdministraClientesJs from '../public/images/proyects/administra-clientes-js.png'
+import thumbBuscarClimaJs from '../public/images/proyects/buscar-clima-js.png'
+import thumbBuscarCancionesLetraJs from '../public/images/proyects/buscar-canciones-letra-js.png'
+import thumbBuscarImagenesJs from '../public/images/proyects/buscar-imagenes-js.png'
+import thumbCotizarCriptomonedasJs from '../public/images/proyects/cotizador-criptomonedas-js.png'
+import thumbCalculadoraPropinasJs from '../public/images/proyects/calculadora-propinas-js.png'
 
 const Proyects = () => (
   <Layout title="Proyectos">
@@ -50,6 +55,56 @@ const Proyects = () => (
       </Section>
 
       <SimpleGrid columns={[2, 2, 3]} gap={6}>
+        <Section delay={0.4}>
+          <WorkGridItem
+            id="calculadora-propinas-js"
+            thumbnail={thumbCalculadoraPropinasJs}
+            title="Calculadora Propinas"
+          >
+            App para calcular las propinas en base a los platillos
+          </WorkGridItem>
+        </Section>
+
+        <Section delay={0.4}>
+          <WorkGridItem
+            id="cotizar-criptomonedas-js"
+            thumbnail={thumbCotizarCriptomonedasJs}
+            title="Cotizador Criptomonedas"
+          >
+            Api de CryptoCompare
+          </WorkGridItem>
+        </Section>
+
+        <Section delay={0.4}>
+          <WorkGridItem
+            id="buscar-imagenes-js"
+            thumbnail={thumbBuscarImagenesJs}
+            title="Buscar Imagenes"
+          >
+            Pixabay api
+          </WorkGridItem>
+        </Section>
+
+        <Section delay={0.4}>
+          <WorkGridItem
+            id="buscar-canciones-letra-js"
+            thumbnail={thumbBuscarCancionesLetraJs}
+            title="Buscar Canciones letra"
+          >
+            Api de lyrics
+          </WorkGridItem>
+        </Section>
+
+        <Section delay={0.4}>
+          <WorkGridItem
+            id="buscar-clima-js"
+            thumbnail={thumbBuscarClimaJs}
+            title="Buscar Clima"
+          >
+            Open Weather api
+          </WorkGridItem>
+        </Section>
+
         <Section delay={0.4}>
           <WorkGridItem
             id="administra-clientes-js"
