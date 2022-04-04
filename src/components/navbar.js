@@ -14,7 +14,10 @@ import {
   IconButton,
   useColorModeValue
 } from '@chakra-ui/react'
-import { HamburgerIcon } from '@chakra-ui/icons'
+import {
+  // AtSignIcon,
+  HamburgerIcon
+} from '@chakra-ui/icons'
 import ThemeToggleButton from './theme-toggle-button'
 import { IoLogoGithub } from 'react-icons/io5'
 
@@ -89,6 +92,16 @@ const Navbar = props => {
             <IoLogoGithub />
             View source code
           </LinkItem>
+          {/* <LinkItem
+            href="/login"
+            path={path}
+            display="inline-flex"
+            alignItems="center"
+            style={{ gap: 4 }}
+            pl={2}
+          >
+            <AtSignIcon />
+          </LinkItem> */}
         </Stack>
 
         <Box flex={1} align="right">
