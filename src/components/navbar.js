@@ -14,12 +14,11 @@ import {
   IconButton,
   useColorModeValue
 } from '@chakra-ui/react'
-import {
-  // AtSignIcon,
-  HamburgerIcon
-} from '@chakra-ui/icons'
+import { HamburgerIcon } from '@chakra-ui/icons'
 import ThemeToggleButton from './theme-toggle-button'
 import { IoLogoGithub } from 'react-icons/io5'
+import { useTranslation } from 'react-i18next'
+import TranslateToggleButton from './translate-toggle-button'
 
 const LinkItem = ({ href, path, _target, children, ...props }) => {
   const active = path === href
@@ -40,6 +39,8 @@ const LinkItem = ({ href, path, _target, children, ...props }) => {
 }
 
 const Navbar = props => {
+  const { t } = useTranslation()
+
   const { path } = props
 
   return (
@@ -75,10 +76,10 @@ const Navbar = props => {
           mt={{ base: 4, md: 0 }}
         >
           <LinkItem href="/proyects" path={path}>
-            Proyectos
+            {t('navBar.projects')}
           </LinkItem>
           <LinkItem href="/contact" path={path}>
-            Contacto
+            {t('navBar.contact')}
           </LinkItem>
           <LinkItem
             target="_blank"
@@ -90,7 +91,7 @@ const Navbar = props => {
             pl={2}
           >
             <IoLogoGithub />
-            View source code
+            {t('navBar.code')}
           </LinkItem>
           {/* <LinkItem
             href="/login"
@@ -103,7 +104,9 @@ const Navbar = props => {
             <AtSignIcon />
           </LinkItem> */}
         </Stack>
-
+        <Box flex={1} align="right">
+          <TranslateToggleButton />
+        </Box>
         <Box flex={1} align="right">
           <ThemeToggleButton />
 
@@ -117,13 +120,13 @@ const Navbar = props => {
               />
               <MenuList>
                 <NextLink href="/" passHref>
-                  <MenuItem as={Link}>About</MenuItem>
+                  <MenuItem as={Link}>{t('navBar.about')}</MenuItem>
                 </NextLink>
                 <NextLink href="/proyects" passHref>
-                  <MenuItem as={Link}>Proyectos</MenuItem>
+                  <MenuItem as={Link}>{t('navBar.projects')}</MenuItem>
                 </NextLink>
                 <NextLink href="/contact" passHref>
-                  <MenuItem as={Link}>Contacto</MenuItem>
+                  <MenuItem as={Link}>{t('navBar.contact')}</MenuItem>
                 </NextLink>
                 <MenuItem
                   as={Link}
@@ -132,7 +135,7 @@ const Navbar = props => {
                   style={{ gap: 4 }}
                 >
                   <IoLogoGithub />
-                  View source code
+                  {t('navBar.code')}
                 </MenuItem>
               </MenuList>
             </Menu>

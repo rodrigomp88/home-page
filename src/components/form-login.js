@@ -8,11 +8,23 @@ export const FormLogin = () => {
         <VStack spacing={4} align="flex-start">
           <FormControl>
             <FormLabel htmlFor="name">Email</FormLabel>
-            <Input name="name" type="text" required variant="filled" />
+            <Input
+              id="name"
+              name="name"
+              type="text"
+              required
+              variant="filled"
+            />
           </FormControl>
           <FormControl>
             <FormLabel htmlFor="password">Password</FormLabel>
-            <Input name="password" type="password" required variant="filled" />
+            <Input
+              id="password"
+              name="password"
+              type="password"
+              required
+              variant="filled"
+            />
           </FormControl>
           <Button type="submit" colorScheme="teal" isFullWidth>
             Ingresar

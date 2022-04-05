@@ -10,9 +10,12 @@ import {
   SimpleGrid,
   Tooltip
 } from '@chakra-ui/react'
+import { useTranslation } from 'react-i18next'
 import { IoLogoLinkedin, IoLogoGithub } from 'react-icons/io5'
 
 const Footer = () => {
+  const { t } = useTranslation()
+
   return (
     <Box align="center" opacity={0.4} fontSize="sm">
       <SimpleGrid row={[2]} gap={2}>
@@ -42,9 +45,9 @@ const Footer = () => {
           </ListItem>
         </List>
       </SimpleGrid>
-      <Badge mt={4}>Hecho con | Next.js | Chakra.ui</Badge>
+      <Badge mt={4}>{t('footer.badge')} | Next.js | Chakra.ui</Badge>
       <Text mt={4}>
-        &copy; {new Date().getFullYear()} Pinea Rodrigo. All Rights Reserved.
+        &copy; {new Date().getFullYear()} Rodrigo Pinea. {t('footer.text')}
       </Text>
     </Box>
   )

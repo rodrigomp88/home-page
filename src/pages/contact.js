@@ -13,18 +13,18 @@ import {
 import { EmailIcon, PhoneIcon } from '@chakra-ui/icons'
 import Layout from '../components/layouts/article'
 import { FormContact } from '../components/form-contact'
+import { useTranslation } from 'react-i18next'
 
 const Contact = () => {
+  const { t } = useTranslation()
+
   return (
     <Layout title="Contacto">
       <Container>
         <Heading as="h1" variant="section-title" fontSize={25} mb={4} mt={8}>
-          Formulario de contacto
+          {t('contact.heading')}
         </Heading>
-        <Text>
-          Para contactarme, por favor completar el siguiente formulario de
-          contacto, acepto cualquier consulta o sugerencia.
-        </Text>
+        <Text>{t('contact.text')}</Text>
 
         <Flex align="center" justify="center" mb={8}>
           <Box p={8} w="80%" rounded="md">
@@ -32,7 +32,7 @@ const Contact = () => {
           </Box>
         </Flex>
         <Heading as="h3" variant="section-title">
-          Otras formas de contactarme:
+          {t('contact.hading2')}
         </Heading>
         <List mb={8}>
           <ListItem>
@@ -56,7 +56,7 @@ const Contact = () => {
                 +5492612522667
               </Button>
             </Link>
-            (solo WhatsApp)
+            {t('contact.link')}
           </ListItem>
         </List>
       </Container>

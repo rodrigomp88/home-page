@@ -1,0 +1,35 @@
+{
+  "navBar": {
+    "projects": "Projects",
+    "contact": "Contact",
+    "code": "View Source Code",
+    "about": "About"
+  },
+  "home": {
+    "topButton": "All proyects",
+    "title": "Web Developer",
+    "cv": "Download my cv",
+    "exp": "Experience",
+    "expBioYear": "Present",
+    "expBioSection": "Freelance web development, I help them with the creation and tutorials for managing corporate emails. Support and advice for the buy of software to the positioning of the all units and administration of the organization.",
+    "aboutTitle": "About",
+    "aboutSection": "Hello! I'm Rodrigo, web developer from Argentina, Mendoza. I like to learn new technologies, build web services, from friendly design to data modeling. Passionate about technologies, in my free time I like to make web games, watch tutorials, learn new programming languages ​​and apis implementations.",
+    "education":"Education",
+    "educationUtn": "I start studies in",
+    "educationHenry": "Intensive web development course",
+    "courses": "Courses",
+    "hobbies": "Hoobies",
+    "hobbiesP": "Art, Music, Photography, Games, Sports",
+    "endBtn": "Contact to me"
+  },
+  "contact": {
+    "heading": "Contact form",
+    "text": "To contact me, complete the following contact form.",
+    "hading2": "Other ways to contact me:",
+    "link": "(only Whatsapp)"
+  },
+  "footer": {
+    "badge": "Made with",
+    "text": "All right reserved"
+  }
+}

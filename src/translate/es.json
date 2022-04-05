@@ -1,0 +1,35 @@
+{
+  "navBar": {
+    "projects": "Proyectos",
+    "contact": "Contacto",
+    "code": "Ver código fuente",
+    "about": "Inicio"
+  },
+  "home": {
+    "topButton": "Todos los proyectos",
+    "title": "Desarrollador web",
+    "cv": "Descarga mi cv",
+    "exp": "Experiencia",
+    "expBioYear": "Presente",
+    "expBioSection": "Desarrollo web freelance, ayuda con la creación y tutorías para el manejo de correos electrónicos corporativos. Soporte y asesoría para la compra de software para el posicionamiento de unidades y administracion de la organización.",
+    "aboutTitle": "Sobre mi",
+    "aboutSection": "Hola! soy Rodrigo, desarrollador web de Argentina, Mendoza. Me gusta aprender nuevas tecnologías, construir servicios web, desde el diseño amigable a modelado de datos. Apasionado por las tecnologias, en mi tiempo libre me gusta hacer juegos web, mirar tutoriales, aprender nuevos lenguajes de programación e implementaciones de apis.",
+    "education":"Educación",
+    "educationUtn": "Comienzo estudios de programación en",
+    "educationHenry": "Curso intensivo de dearrollo web",
+    "courses": "Cursos",
+    "hobbies": "Aficiones",
+    "hobbiesP": "Arte, Musica, Fotografía, Juegos, Deportes",
+    "endBtn": "Contáctame"
+  },
+  "contact": {
+    "heading": "Formulario de contacto",
+    "text": "Para contactarme, completar el siguiente formulario de contacto.",
+    "hading2": "Otras formas de contactarme:",
+    "link": "(Solo Whatsapp)"
+  },
+  "footer": {
+    "badge": "Hecho con",
+    "text": "Todos los derechos reservados"
+  }
+}

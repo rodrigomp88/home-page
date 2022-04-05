@@ -19,7 +19,7 @@ const Main = ({ children, router }) => {
         />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="/card.png" />
-        <title>Pinea Rodrigo - Homepage</title>
+        <title>Rodrigo Pinea - Homepage</title>
       </Head>
 
       <NavBar path={router.asPath} />
