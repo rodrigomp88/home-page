@@ -19,7 +19,8 @@ import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import { useTranslation } from 'react-i18next'
 import { WorkGridItem } from '../components/grid-item'
-import thumbListaGasto from '../../public/images/proyects/lista-gastos.png'
+import thumbAPV from '../../public/images/proyects/apv.png'
+import thumbEcommerce from '../../public/images/proyects/ecommerce.png'
 
 const Home = () => {
   const { t } = useTranslation()
@@ -31,20 +32,16 @@ const Home = () => {
         <SimpleGrid columns={[1, 1, 2]} gap={6}>
           <Section delay={0.2}>
             <WorkGridItem
-              id="lista-de-gastos"
-              title="Lista de gastos"
-              thumbnail={thumbListaGasto}
+              id="ecommerce"
+              title="Ecommerce"
+              thumbnail={thumbEcommerce}
             >
-              Una apicación para controlar los gastos e ingresos mensuales
+              Ecommrece en nextJs, tailwindCss, mongoDB
             </WorkGridItem>
           </Section>
           <Section delay={0.2}>
-            <WorkGridItem
-              id="lista-de-gastos"
-              title="Lista de gastos"
-              thumbnail={thumbListaGasto}
-            >
-              Una apicación para controlar los gastos e ingresos mensuales
+            <WorkGridItem id="apv" title="APV" thumbnail={thumbAPV}>
+              Administra pacientes de veterinaria
             </WorkGridItem>
           </Section>
         </SimpleGrid>
@@ -140,6 +137,18 @@ const Home = () => {
           </Heading>
           <UnorderedList>
             <ListItem>
+              Next.js: El framework de React para producción(Fernando Herrera)
+              Udemy
+            </ListItem>
+            <ListItem>
+              JavaScript Moderno Guía Definitiva Construye +15 Proyectos (Juan
+              Pablo De la torre Valdez) Udemy
+            </ListItem>
+            <ListItem>
+              Next JS: Crea tu tienda online completa (Agustin Navarro Galdon)
+              Udemy
+            </ListItem>
+            <ListItem>
               La Web Empieza Aquí: TypeScript, Angular , Storage, Firebase
               (Tomas Garay) Udemy
             </ListItem>
@@ -161,14 +170,6 @@ const Home = () => {
             <ListItem>
               React y Firebase El Curso Completo, Práctico y desde Cero (Carlos
               Arturo Esparza) Udemy
-            </ListItem>
-            <ListItem>
-              Next JS: Crea tu tienda online completa (Agustin Navarro Galdon)
-              Udemy
-            </ListItem>
-            <ListItem>
-              JavaScript Moderno Guía Definitiva Construye +15 Proyectos (Juan
-              Pablo De la torre Valdez) Udemy
             </ListItem>
           </UnorderedList>
         </Section>

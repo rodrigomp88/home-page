@@ -30,6 +30,7 @@ import thumbPokeapi from '../../public/images/proyects/pokemon-api.png'
 import thumbCalculadorajs from '../../public/images/proyects/calculadora-js.png'
 import thumbAPV from '../../public/images/proyects/apv.png'
 import thumbTodoApp from '../../public/images/proyects/todo-app.png'
+import thumbEcommerce from '../../public/images/proyects/ecommerce.png'
 
 const Proyects = () => (
   <Layout title="Proyectos">
@@ -43,6 +44,16 @@ const Proyects = () => (
       <SimpleGrid columns={[1, 1, 2]} gap={6}>
         <Section delay={0.2}>
           <WorkGridItem
+            id="ecommerce"
+            title="Ecommerce"
+            thumbnail={thumbEcommerce}
+          >
+            Ecommrece en nextJs, tailwindCss, mongoDB
+          </WorkGridItem>
+        </Section>
+
+        <Section delay={0.2}>
+          <WorkGridItem
             id="lista-de-gastos"
             title="Lista de gastos"
             thumbnail={thumbListaGasto}
@@ -52,11 +63,7 @@ const Proyects = () => (
         </Section>
 
         <Section delay={0.2}>
-          <WorkGridItem
-            id="todo-app"
-            title="ToDo App"
-            thumbnail={thumbTodoApp}
-          >
+          <WorkGridItem id="todo-app" title="ToDo App" thumbnail={thumbTodoApp}>
             Gestor de tareas
           </WorkGridItem>
         </Section>
