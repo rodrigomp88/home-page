@@ -18,7 +18,7 @@ import { HamburgerIcon } from '@chakra-ui/icons'
 import ThemeToggleButton from './theme-toggle-button'
 import { IoLogoGithub } from 'react-icons/io5'
 import { useTranslation } from 'react-i18next'
-import TranslateToggleButton from './translate-toggle-button'
+// import TranslateToggleButton from './translate-toggle-button'
 
 const LinkItem = ({ href, path, _target, children, ...props }) => {
   const active = path === href
@@ -104,9 +104,9 @@ const Navbar = props => {
             <AtSignIcon />
           </LinkItem> */}
         </Stack>
-        <Box flex={1} align="right">
+        {/* <Box flex={1} align="right">
           <TranslateToggleButton />
-        </Box>
+        </Box> */}
         <Box flex={1} align="right">
           <ThemeToggleButton />
 

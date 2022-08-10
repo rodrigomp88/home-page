@@ -9,16 +9,17 @@ import {
   ListItem,
   useColorModeValue,
   UnorderedList,
-  Tooltip
+  Tooltip,
+  SimpleGrid
 } from '@chakra-ui/react'
 import { ChevronRightIcon, ExternalLinkIcon } from '@chakra-ui/icons'
 import Paragraph from '../components/paragraph'
 import { BioSection, BioYear } from '../components/bio'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
-import ImageSlider from '../components/image-slider'
-import { SlideData } from '../data/slide-data'
 import { useTranslation } from 'react-i18next'
+import { WorkGridItem } from '../components/grid-item'
+import thumbListaGasto from '../../public/images/proyects/lista-gastos.png'
 
 const Home = () => {
   const { t } = useTranslation()
@@ -26,7 +27,27 @@ const Home = () => {
   return (
     <Layout>
       <Container mt={8} delay={0.5}>
-        <ImageSlider slides={SlideData} />
+        {/* <ImageSlider slides={SlideData} /> */}
+        <SimpleGrid columns={[1, 1, 2]} gap={6}>
+          <Section delay={0.2}>
+            <WorkGridItem
+              id="lista-de-gastos"
+              title="Lista de gastos"
+              thumbnail={thumbListaGasto}
+            >
+              Una apicación para controlar los gastos e ingresos mensuales
+            </WorkGridItem>
+          </Section>
+          <Section delay={0.2}>
+            <WorkGridItem
+              id="lista-de-gastos"
+              title="Lista de gastos"
+              thumbnail={thumbListaGasto}
+            >
+              Una apicación para controlar los gastos e ingresos mensuales
+            </WorkGridItem>
+          </Section>
+        </SimpleGrid>
         <Box align="center" my={4} mb={6}>
           <NextLink href="/proyects">
             <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">

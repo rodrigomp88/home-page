@@ -34,7 +34,7 @@ const Logo = () => {
             fontFamily='M PLUS Rounded 1c", sans-serif'
             fontWeight="bold"
           >
-            Rodrigo Pinea
+            RP
           </Text>
         </LogoBox>
       </a>

@@ -24,12 +24,18 @@ import thumbBuscarCancionesLetraJs from '../../public/images/proyects/buscar-can
 import thumbBuscarImagenesJs from '../../public/images/proyects/buscar-imagenes-js.png'
 import thumbCotizarCriptomonedasJs from '../../public/images/proyects/cotizador-criptomonedas-js.png'
 import thumbCalculadoraPropinasJs from '../../public/images/proyects/calculadora-propinas-js.png'
+import thumbCloneTraductor from '../../public/images/proyects/clone-traductor.png'
+import thumbAgenciaWeb from '../../public/images/proyects/agency-web.png'
+import thumbPokeapi from '../../public/images/proyects/pokemon-api.png'
+import thumbCalculadorajs from '../../public/images/proyects/calculadora-js.png'
+import thumbAPV from '../../public/images/proyects/apv.png'
+import thumbTodoApp from '../../public/images/proyects/todo-app.png'
 
 const Proyects = () => (
   <Layout title="Proyectos">
     <Container>
       <Section delay={0.1}>
-        <Heading as="h3" fontSize={20} mb={4}>
+        <Heading as="h3" fontSize={20} mb={4} mt={4}>
           Aplicaciones
         </Heading>
       </Section>
@@ -44,6 +50,22 @@ const Proyects = () => (
             Una apicación para controlar los gastos e ingresos mensuales
           </WorkGridItem>
         </Section>
+
+        <Section delay={0.2}>
+          <WorkGridItem
+            id="todo-app"
+            title="ToDo App"
+            thumbnail={thumbTodoApp}
+          >
+            Gestor de tareas
+          </WorkGridItem>
+        </Section>
+
+        <Section delay={0.2}>
+          <WorkGridItem id="apv" title="APV" thumbnail={thumbAPV}>
+            Administra pacientes de veterinaria
+          </WorkGridItem>
+        </Section>
       </SimpleGrid>
 
       <Section delay={0.3}>
@@ -55,6 +77,43 @@ const Proyects = () => (
       </Section>
 
       <SimpleGrid columns={[2, 2, 3]} gap={6}>
+        <Section delay={0.4}>
+          <WorkGridItem
+            id="agencia-web"
+            thumbnail={thumbAgenciaWeb}
+            title="Agencia web"
+          >
+            Diseño agencia web para practicar funcionamiento de tailwind y
+            typescript
+          </WorkGridItem>
+        </Section>
+
+        <Section delay={0.4}>
+          <WorkGridItem id="poke-api" thumbnail={thumbPokeapi} title="Pokeapi">
+            Pruebas con la api de poke-api
+          </WorkGridItem>
+        </Section>
+
+        <Section delay={0.4}>
+          <WorkGridItem
+            id="calculadora-js"
+            thumbnail={thumbCalculadorajs}
+            title="Calculadora"
+          >
+            Calculadora js
+          </WorkGridItem>
+        </Section>
+
+        <Section delay={0.4}>
+          <WorkGridItem
+            id="traductor-clone-js"
+            thumbnail={thumbCloneTraductor}
+            title="Google traductor"
+          >
+            Traductor de google clone
+          </WorkGridItem>
+        </Section>
+
         <Section delay={0.4}>
           <WorkGridItem
             id="calculadora-propinas-js"
