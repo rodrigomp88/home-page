@@ -19,8 +19,8 @@ import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import { useTranslation } from 'react-i18next'
 import { WorkGridItem } from '../components/grid-item'
-import thumbAPV from '../../public/images/proyects/apv.png'
 import thumbEcommerce from '../../public/images/proyects/ecommerce.png'
+import thumbTwitter from '../../public/images/proyects/twitter-0.png'
 
 const Home = () => {
   const { t } = useTranslation()
@@ -28,7 +28,6 @@ const Home = () => {
   return (
     <Layout>
       <Container mt={8} delay={0.5}>
-        {/* <ImageSlider slides={SlideData} /> */}
         <SimpleGrid columns={[1, 1, 2]} gap={6}>
           <Section delay={0.2}>
             <WorkGridItem
@@ -40,8 +39,12 @@ const Home = () => {
             </WorkGridItem>
           </Section>
           <Section delay={0.2}>
-            <WorkGridItem id="apv" title="APV" thumbnail={thumbAPV}>
-              Administra pacientes de veterinaria
+            <WorkGridItem
+              id="twitter-clone"
+              title="Twitter clone"
+              thumbnail={thumbTwitter}
+            >
+              Clone de twitter con las funcionalidades básicas
             </WorkGridItem>
           </Section>
         </SimpleGrid>

@@ -31,6 +31,7 @@ import thumbCalculadorajs from '../../public/images/proyects/calculadora-js.png'
 import thumbAPV from '../../public/images/proyects/apv.png'
 import thumbTodoApp from '../../public/images/proyects/todo-app.png'
 import thumbEcommerce from '../../public/images/proyects/ecommerce.png'
+import thumbTwitter from '../../public/images/proyects/twitter-0.png'
 
 const Proyects = () => (
   <Layout title="Proyectos">
@@ -49,6 +50,16 @@ const Proyects = () => (
             thumbnail={thumbEcommerce}
           >
             Ecommrece en nextJs, tailwindCss, mongoDB
+          </WorkGridItem>
+        </Section>
+
+        <Section delay={0.2}>
+          <WorkGridItem
+            id="twitter-clone"
+            title="Twitter clone"
+            thumbnail={thumbTwitter}
+          >
+            Clone de twitter con las funcionalidades básicas
           </WorkGridItem>
         </Section>
 
