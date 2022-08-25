@@ -19,8 +19,8 @@ import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import { useTranslation } from 'react-i18next'
 import { WorkGridItem } from '../components/grid-item'
-import thumbEcommerce from '../../public/images/proyects/ecommerce.png'
-import thumbTwitter from '../../public/images/proyects/twitter-0.png'
+import thumbEcommerce from '../public/images/proyects/ecommerce.png'
+import thumbTwitter from '../public/images/proyects/twitter-0.png'
 
 const Home = () => {
   const { t } = useTranslation()
@@ -28,34 +28,6 @@ const Home = () => {
   return (
     <Layout>
       <Container mt={8} delay={0.5}>
-        <SimpleGrid columns={[1, 1, 2]} gap={6}>
-          <Section delay={0.2}>
-            <WorkGridItem
-              id="ecommerce"
-              title="Ecommerce"
-              thumbnail={thumbEcommerce}
-            >
-              Ecommrece en nextJs, tailwindCss, mongoDB
-            </WorkGridItem>
-          </Section>
-          <Section delay={0.2}>
-            <WorkGridItem
-              id="twitter-clone"
-              title="Twitter clone"
-              thumbnail={thumbTwitter}
-            >
-              Clone de twitter con las funcionalidades básicas
-            </WorkGridItem>
-          </Section>
-        </SimpleGrid>
-        <Box align="center" my={4} mb={6}>
-          <NextLink href="/proyects">
-            <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
-              {t('home.topButton')}
-            </Button>
-          </NextLink>
-        </Box>
-
         <Box display={{ md: 'flex' }} mb={2}>
           <Box flexGrow={1}>
             <Heading>Rodrigo Pinea</Heading>
@@ -78,18 +50,22 @@ const Home = () => {
             ml={{ md: 6 }}
             textAlign="center"
           >
-            <Tooltip label="OUCH!" placement="left">
-              <Image
-                borderColor="whiteAlpha.800"
-                borderWidth={2}
-                borderStyle="solid"
-                maxWidth="100px"
-                display="inline-block"
-                borderRadius="full"
-                src="/images/profile-img.jpg"
-                alt="Profile image"
-              />
-            </Tooltip>
+            <NextLink href="login">
+              <Link>
+                <Tooltip label="LogIn" placement="left">
+                  <Image
+                    borderColor="whiteAlpha.800"
+                    borderWidth={2}
+                    borderStyle="solid"
+                    maxWidth="100px"
+                    display="inline-block"
+                    borderRadius="full"
+                    src="/images/profile-img.jpg"
+                    alt="Profile image"
+                  />
+                </Tooltip>
+              </Link>
+            </NextLink>
           </Box>
         </Box>
 
@@ -100,8 +76,18 @@ const Home = () => {
           textAlign="center"
           bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
         >
-          JavaScript | React | NodeJs | MySql | MongoDB | NextJs
+          React | Next | JavaScript | NodeJs | MySql | MongoDB | Firebase
         </Box>
+
+        <Section delay={0.7}>
+          <Box align="center" my={4}>
+            <NextLink href="/contact">
+              <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
+                {t('home.endBtn')}
+              </Button>
+            </NextLink>
+          </Box>
+        </Section>
 
         <Section delay={0.2}>
           <Heading as="h3" variant="section-title">
@@ -184,15 +170,33 @@ const Home = () => {
           <Paragraph>{t('home.hobbiesP')}</Paragraph>
         </Section>
 
-        <Section delay={0.7}>
-          <Box align="center" my={4}>
-            <NextLink href="/contact">
-              <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
-                {t('home.endBtn')}
-              </Button>
-            </NextLink>
-          </Box>
-        </Section>
+        <SimpleGrid columns={[1, 1, 2]} gap={6}>
+          <Section delay={0.2}>
+            <WorkGridItem
+              id="ecommerce"
+              title="Ecommerce"
+              thumbnail={thumbEcommerce}
+            >
+              Ecommrece en nextJs, tailwindCss, mongoDB
+            </WorkGridItem>
+          </Section>
+          <Section delay={0.2}>
+            <WorkGridItem
+              id="twitter-clone"
+              title="Twitter clone"
+              thumbnail={thumbTwitter}
+            >
+              Clone de twitter con las funcionalidades básicas
+            </WorkGridItem>
+          </Section>
+        </SimpleGrid>
+        <Box align="center" mt={10} mb={6}>
+          <NextLink href="/proyects">
+            <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
+              {t('home.topButton')}
+            </Button>
+          </NextLink>
+        </Box>
       </Container>
     </Layout>
   )

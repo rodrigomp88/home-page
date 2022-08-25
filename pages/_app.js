@@ -4,11 +4,11 @@ import Fonts from '../components/fonts'
 import theme from '../lib/theme'
 import { AnimatePresence } from 'framer-motion'
 import '../translate'
-import { AuthContextProvider } from '../context/AuthContext'
+import { AuthProvider } from '../context/Authontext'
 
 function Website({ Component, pageProps, router }) {
   return (
-    <AuthContextProvider>
+    <AuthProvider>
       <ChakraProvider theme={theme}>
         <Fonts />
         <Layout router={router}>
@@ -17,7 +17,7 @@ function Website({ Component, pageProps, router }) {
           </AnimatePresence>
         </Layout>
       </ChakraProvider>
-    </AuthContextProvider>
+    </AuthProvider>
   )
 }
 

@@ -14,3 +14,5 @@ const app = !getApps().length ? initializeApp(firebaseConfig) : getApp()
 const auth = getAuth(app)
 
 export { auth }
+
+console.log(app.name ? 'Firebase activado' : 'firebase not working')
