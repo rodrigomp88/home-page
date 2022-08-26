@@ -19,16 +19,33 @@ export const FormContact = () => {
     formState: { errors }
   } = useForm()
 
-  // const onSubmit = () => {
-  //   router.push('/success')
-  // }
+  const encode = data => {
+    return Object.keys(data)
+      .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+      .join('&')
+  }
+
+  const onSubmit = data => {
+    fetch('/success', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: encode({
+        'form-name': 'contact',
+        ...data
+      })
+    })
+      .then(data => console.log(data))
+      .catch(error => alert(error))
+  }
 
   return (
     <form
       name="contact"
       method="POST"
       data-netlify="true"
-      onSubmit={handleSubmit()}
+      netlify-honeypot="form-name"
+      action="/success"
+      onSubmit={handleSubmit(onSubmit)}
     >
       <input type="hidden" name="form-name" value="contact" />
       <VStack spacing={4} align="flex-start">

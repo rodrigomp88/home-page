@@ -15,4 +15,4 @@ const auth = getAuth(app)
 
 export { auth }
 
-console.log(app.name ? 'Firebase activado' : 'firebase not working')
+// console.log(app.name ? 'Firebase activado' : 'firebase not working')
