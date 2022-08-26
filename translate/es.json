@@ -3,7 +3,8 @@
     "projects": "Proyectos",
     "contact": "Contacto",
     "code": "Ver código fuente",
-    "about": "Inicio"
+    "about": "Inicio",
+    "admin": "Administar"
   },
   "home": {
     "topButton": "Todos los proyectos",

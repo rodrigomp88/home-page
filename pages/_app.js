@@ -1,10 +1,10 @@
 import { ChakraProvider } from '@chakra-ui/react'
+import { AnimatePresence } from 'framer-motion'
 import Layout from '../components/layouts/main'
 import Fonts from '../components/fonts'
 import theme from '../lib/theme'
-import { AnimatePresence } from 'framer-motion'
+import { AuthProvider } from '../context/AuthContext'
 import '../translate'
-import { AuthProvider } from '../context/Authontext'
 
 function Website({ Component, pageProps, router }) {
   return (

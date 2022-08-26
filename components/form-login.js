@@ -3,7 +3,7 @@ import { Button, FormControl, FormLabel, Input, VStack } from '@chakra-ui/react'
 import { useForm } from 'react-hook-form'
 import Paragraph from './paragraph'
 import { useRouter } from 'next/router'
-import { useAuth } from '../context/Authontext'
+import { useAuth } from '../context/AuthContext'
 
 export const FormLogin = () => {
   const router = useRouter()
@@ -15,7 +15,6 @@ export const FormLogin = () => {
   } = useForm()
 
   const onSubmit = async data => {
-    console.log({ data })
     try {
       await login(data.email, data.password)
       router.push('/admin')

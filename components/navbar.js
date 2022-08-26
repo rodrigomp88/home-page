@@ -14,11 +14,11 @@ import {
   IconButton,
   useColorModeValue
 } from '@chakra-ui/react'
-import { HamburgerIcon } from '@chakra-ui/icons'
+import { HamburgerIcon, UnlockIcon } from '@chakra-ui/icons'
 import ThemeToggleButton from './theme-toggle-button'
 import { IoLogoGithub } from 'react-icons/io5'
 import { useTranslation } from 'react-i18next'
-// import TranslateToggleButton from './translate-toggle-button'
+import { useAuth } from '../context/AuthContext'
 
 const LinkItem = ({ href, path, _target, children, ...props }) => {
   const active = path === href
@@ -40,8 +40,16 @@ const LinkItem = ({ href, path, _target, children, ...props }) => {
 
 const Navbar = props => {
   const { t } = useTranslation()
-
+  const { user, logout } = useAuth()
   const { path } = props
+
+  const handleLogout = async () => {
+    try {
+      await logout()
+    } catch (error) {
+      console.error(error.message)
+    }
+  }
 
   return (
     <Box
@@ -81,6 +89,11 @@ const Navbar = props => {
           <LinkItem href="/contact" path={path}>
             {t('navBar.contact')}
           </LinkItem>
+          {user && (
+            <LinkItem href="/admin" path={path}>
+              {t('navBar.admin')}
+            </LinkItem>
+          )}
           <LinkItem
             target="_blank"
             href="https://github.com/rodrigomp88/home-page"
@@ -104,9 +117,11 @@ const Navbar = props => {
             <AtSignIcon />
           </LinkItem> */}
         </Stack>
-        {/* <Box flex={1} align="right">
-          <TranslateToggleButton />
-        </Box> */}
+        {user && (
+          <IconButton onClick={handleLogout} flex={1} align="right">
+            <UnlockIcon />
+          </IconButton>
+        )}
         <Box flex={1} align="right">
           <ThemeToggleButton />
 
@@ -128,6 +143,11 @@ const Navbar = props => {
                 <NextLink href="/contact" passHref>
                   <MenuItem as={Link}>{t('navBar.contact')}</MenuItem>
                 </NextLink>
+                {user && (
+                  <NextLink href="/contact" passHref>
+                    <MenuItem as={Link}>{t('navBar.admin')}</MenuItem>
+                  </NextLink>
+                )}
                 <MenuItem
                   as={Link}
                   target="_blank"

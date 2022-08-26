@@ -1,8 +1,11 @@
-import { Container, Heading, Box, Flex } from '@chakra-ui/react'
+import { Container, Heading, Link, Button, Box, Flex } from '@chakra-ui/react'
 import { FormLogin } from '../components/form-login'
 import Layout from '../components/layouts/article'
+import { useAuth } from '../context/AuthContext'
 
 const Login = () => {
+  const { user } = useAuth()
+
   return (
     <Layout title="Login">
       <Container>
@@ -12,7 +15,15 @@ const Login = () => {
 
         <Flex align="center" justify="center" mb={8}>
           <Box p={8} w="80%" rounded="md">
-            <FormLogin />
+            {user ? (
+              <Link href="/admin">
+                <Button colorScheme="teal" isFullWidth>
+                  Ya estas logeado
+                </Button>
+              </Link>
+            ) : (
+              <FormLogin />
+            )}
           </Box>
         </Flex>
       </Container>
