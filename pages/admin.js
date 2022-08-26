@@ -1,9 +1,11 @@
+import { useContext } from 'react'
 import { Container, Button, Heading, Link, Flex } from '@chakra-ui/react'
+import { AuthContext } from '../context'
+import { ProyectsPost } from '../components'
 import Layout from '../components/layouts/article'
-import { useAuth } from '../context/AuthContext'
 
 const Admin = () => {
-  const { user } = useAuth()
+  const { user } = useContext(AuthContext)
 
   return (
     <Layout title="Admin">
@@ -13,7 +15,9 @@ const Admin = () => {
             Bienvenido: {user?.email}
           </Heading>
 
-          <Flex align="center" justify="center" mb={8}></Flex>
+          <Flex align="center" justify="center" mb={8}>
+            <ProyectsPost />
+          </Flex>
         </Container>
       ) : (
         <Container>

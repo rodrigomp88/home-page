@@ -10,19 +10,18 @@ import {
 import { IoLogoGithub } from 'react-icons/io5'
 import Layout from '../../components/layouts/article'
 import { ExternalLinkIcon } from '@chakra-ui/icons'
-import { Title, WorkImage, Meta } from '../../components/work'
-import P from '../../components/paragraph'
+import { Title, WorkImage, Meta, Paragraph } from '../../components'
 
 const Proyect = () => (
   <Layout title="Calculadora Propinas">
     <Container>
       <Title>Calculadora Propinas</Title>
-      <P>
+      <Paragraph>
         <Badge>Calculadora Propinas</Badge>Una app con json server creando
         nuestra propia api, selecione una mesa y la hora, agregue platillos a la
         mesa selecionada, lista el total de los platillos y administre que tipo
         de propina entrega, 10%, 25%, 50%.
-      </P>
+      </Paragraph>
       <List ml={4} my={4}>
         <ListItem>
           <Meta>Stack</Meta>

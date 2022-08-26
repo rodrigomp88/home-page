@@ -11,21 +11,20 @@ import {
 import { IoLogoGithub } from 'react-icons/io5'
 import Layout from '../../components/layouts/article'
 import { ExternalLinkIcon } from '@chakra-ui/icons'
-import { Title, WorkImage, Meta } from '../../components/work'
-import P from '../../components/paragraph'
+import { Title, WorkImage, Meta, Paragraph } from '../../components'
 
 const Proyect = () => (
   <Layout title="APV">
     <Container>
       <Title>APV</Title>
-      <P>
+      <Paragraph>
         <Badge>APV</Badge> Administra pacientes de veterinaria y los guarda en
         Mongo Atlas, el proyecto esta separado por backend y frontend
-      </P>
-      <P>
+      </Paragraph>
+      <Paragraph>
         Para probar la carga de paceintes ingrese con el usuario,
         -correo@correo.com. Y la contraseña, -password
-      </P>
+      </Paragraph>
       <List ml={4} my={4}>
         <ListItem>
           <Meta>URL</Meta>

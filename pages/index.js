@@ -13,12 +13,16 @@ import {
   SimpleGrid
 } from '@chakra-ui/react'
 import { ChevronRightIcon, ExternalLinkIcon } from '@chakra-ui/icons'
-import Paragraph from '../components/paragraph'
-import { BioSection, BioYear } from '../components/bio'
-import Layout from '../components/layouts/article'
-import Section from '../components/section'
 import { useTranslation } from 'react-i18next'
-import { WorkGridItem } from '../components/grid-item'
+import {
+  WorkGridItem,
+  Section,
+  BioSection,
+  BioYear,
+  Paragraph
+} from '../components'
+import Layout from '../components/layouts/article'
+
 import thumbEcommerce from '../public/images/proyects/ecommerce.png'
 import thumbTwitter from '../public/images/proyects/twitter-0.png'
 

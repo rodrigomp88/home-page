@@ -10,17 +10,17 @@ import {
 import { IoLogoGithub } from 'react-icons/io5'
 import Layout from '../../components/layouts/article'
 import { ExternalLinkIcon } from '@chakra-ui/icons'
-import { Title, WorkImage, Meta } from '../../components/work'
-import P from '../../components/paragraph'
+import { Title, WorkImage, Meta, Paragraph } from '../../components'
+
 
 const Proyect = () => (
   <Layout title="Carrito compra">
     <Container>
       <Title>Carrito compra</Title>
-      <P>
+      <Paragraph>
         <Badge>Carrito compra</Badge> carrito de compras, almacena cursos en
         localStorage, borra o vacia todo el carrito.
-      </P>
+      </Paragraph>
       <List ml={4} my={4}>
         <ListItem>
           <Meta>URL</Meta>

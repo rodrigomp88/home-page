@@ -1,7 +1,7 @@
 import { Select, Tooltip } from '@chakra-ui/react'
 import { useTranslation } from 'react-i18next'
 
-const TranslateToggleButton = () => {
+export const TranslateToggleButton = () => {
   const { i18n } = useTranslation()
 
   const handleSelect = e => {
@@ -22,4 +22,3 @@ const TranslateToggleButton = () => {
   )
 }
 
-export default TranslateToggleButton

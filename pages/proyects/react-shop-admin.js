@@ -11,19 +11,20 @@ import {
 import { IoLogoGithub } from 'react-icons/io5'
 import Layout from '../../components/layouts/article'
 import { ExternalLinkIcon } from '@chakra-ui/icons'
-import { Title, WorkImage, Meta } from '../../components/work'
-import P from '../../components/paragraph'
+import { Title, WorkImage, Meta, Paragraph } from '../../components'
 
 const Proyect = () => (
   <Layout title="React shop admin">
     <Container>
       <Title>React shop admin</Title>
-      <P>
+      <Paragraph>
         <Badge>React shop admin</Badge> componente realizado con api de prueba
         para acciones de crud, muestra de graficos con Chartjs, Login/Logout,
         muestra de datos con paginación, eliminacion y edicion.
-      </P>
-      <P>La plantilla es un diseño tomado de la pagina de tailwind.</P>
+      </Paragraph>
+      <Paragraph>
+        La plantilla es un diseño tomado de la pagina de tailwind.
+      </Paragraph>
       <List ml={4} my={4}>
         <ListItem>
           <Meta>URL</Meta>

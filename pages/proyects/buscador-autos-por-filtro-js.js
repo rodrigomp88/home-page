@@ -10,17 +10,16 @@ import {
 import { IoLogoGithub } from 'react-icons/io5'
 import Layout from '../../components/layouts/article'
 import { ExternalLinkIcon } from '@chakra-ui/icons'
-import { Title, WorkImage, Meta } from '../../components/work'
-import P from '../../components/paragraph'
+import { Title, WorkImage, Meta, Paragraph } from '../../components'
 
 const Proyect = () => (
   <Layout title="Buscador Autos Por Filtros">
     <Container>
       <Title>Buscador Autos Por Filtros</Title>
-      <P>
+      <Paragraph>
         <Badge>Buscador Autos Por Filtros</Badge> Filtrar busqueda de datos por
         Marca, precio maximo y minimo, año, puertas, transmision y color
-      </P>
+      </Paragraph>
       <List ml={4} my={4}>
         <ListItem>
           <Meta>URL</Meta>

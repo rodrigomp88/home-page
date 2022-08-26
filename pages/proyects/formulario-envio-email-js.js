@@ -10,17 +10,16 @@ import {
 import { IoLogoGithub } from 'react-icons/io5'
 import Layout from '../../components/layouts/article'
 import { ExternalLinkIcon } from '@chakra-ui/icons'
-import { Title, WorkImage, Meta } from '../../components/work'
-import P from '../../components/paragraph'
+import { Title, WorkImage, Meta, Paragraph } from '../../components'
 
 const Proyect = () => (
   <Layout title="Formulario envio emails">
     <Container>
       <Title>Formulario envio emails</Title>
-      <P>
+      <Paragraph>
         <Badge>Formulario envio de emails </Badge> con validaciones y spinner de
         carga.
-      </P>
+      </Paragraph>
       <List ml={4} my={4}>
         <ListItem>
           <Meta>URL</Meta>

@@ -11,18 +11,17 @@ import {
 import { IoLogoGithub } from 'react-icons/io5'
 import Layout from '../../components/layouts/article'
 import { ExternalLinkIcon } from '@chakra-ui/icons'
-import { Title, WorkImage, Meta } from '../../components/work'
-import P from '../../components/paragraph'
+import { Title, WorkImage, Meta, Paragraph } from '../../components'
 
 const Proyect = () => (
   <Layout title="Memorama 1.0">
     <Container>
       <Title>Memorama 1.0</Title>
-      <P>
+      <Paragraph>
         <Badge>Memorama 1.0</Badge> juego de memoria con números, cuenta con un
         contador regresivo de 30 segundos y cantidad de intentos realizados, al
         final podra ver sus resultados.
-      </P>
+      </Paragraph>
       <List ml={4} my={4}>
         <ListItem>
           <Meta>URL</Meta>

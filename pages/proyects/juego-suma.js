@@ -11,18 +11,17 @@ import {
 import { IoLogoGithub } from 'react-icons/io5'
 import Layout from '../../components/layouts/article'
 import { ExternalLinkIcon } from '@chakra-ui/icons'
-import { Title, WorkImage, Meta } from '../../components/work'
-import P from '../../components/paragraph'
+import { Title, WorkImage, Meta, Paragraph } from '../../components'
 
 const Proyect = () => (
   <Layout title="Juego suma">
     <Container>
       <Title>Juego suma</Title>
-      <P>
+      <Paragraph>
         <Badge>Juego suma</Badge> juego de suma para niños, realizado con cariño
         para los menores de mi familia u calquier otra persona que desee
         aprender a sumar.
-      </P>
+      </Paragraph>
       <List ml={4} my={4}>
         <ListItem>
           <Meta>URL</Meta>

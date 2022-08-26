@@ -11,25 +11,24 @@ import {
 import { IoLogoGithub } from 'react-icons/io5'
 import Layout from '../../components/layouts/article'
 import { ExternalLinkIcon } from '@chakra-ui/icons'
-import { Title, WorkImage, Meta } from '../../components/work'
-import P from '../../components/paragraph'
+import { Title, WorkImage, Meta, Paragraph } from '../../components'
 
 const Proyect = () => (
   <Layout title="Lista de gastos">
     <Container>
       <Title>Lista de gastos</Title>
-      <P>
+      <Paragraph>
         <Badge>Lista de gastos</Badge> es una aplicación para controlar egresos
         e ingresos mensuales de distintos tipos de servicios y productos
         adquiridos o gastados a lo largo de cada mes.
-      </P>
-      <P>
+      </Paragraph>
+      <Paragraph>
         La aplicaión cuenta con un login para registar usuarios nuevos y
         mantener una sesion. Dentro de la app se divide en dos secciones, Egreso
         e Ingreso, dentro de cualquiera de las dos opciones podra visualizar el
         historial de todos los ingresos y egresos realizados, y la segunda para
         observar las categorias de los distintos tipos de egresos.
-      </P>
+      </Paragraph>
       <List ml={4} my={4}>
         <ListItem>
           <Meta>URL</Meta>

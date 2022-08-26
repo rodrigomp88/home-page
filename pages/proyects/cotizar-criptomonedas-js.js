@@ -10,17 +10,16 @@ import {
 import { IoLogoGithub } from 'react-icons/io5'
 import Layout from '../../components/layouts/article'
 import { ExternalLinkIcon } from '@chakra-ui/icons'
-import { Title, WorkImage, Meta } from '../../components/work'
-import P from '../../components/paragraph'
+import { Title, WorkImage, Meta, Paragraph } from '../../components'
 
 const Proyect = () => (
   <Layout title="Cotizador Criptomonedas">
     <Container>
       <Title>Cotizador Criptomonedas</Title>
-      <P>
+      <Paragraph>
         <Badge>Cotizador Criptomonedas</Badge>Cotizador de criptomonedas con la
         api de CryptoCompare.
-      </P>
+      </Paragraph>
       <List ml={4} my={4}>
         <ListItem>
           <Meta>URL</Meta>

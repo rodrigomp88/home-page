@@ -4,16 +4,15 @@ import {
   Box,
   Button,
   Flex,
-  Text,
   ListItem,
   List,
   Link,
   Icon
 } from '@chakra-ui/react'
 import { EmailIcon, PhoneIcon } from '@chakra-ui/icons'
-import Layout from '../components/layouts/article'
-import { FormContact } from '../components/form-contact'
 import { useTranslation } from 'react-i18next'
+import { FormContact } from '../components'
+import Layout from '../components/layouts/article'
 
 const Contact = () => {
   const { t } = useTranslation()
@@ -24,10 +23,9 @@ const Contact = () => {
         <Heading as="h1" variant="section-title" fontSize={25} mb={4} mt={8}>
           {t('contact.heading')}
         </Heading>
-        <Text>{t('contact.text')}</Text>
 
         <Flex align="center" justify="center" mb={8}>
-          <Box p={8} w="80%" rounded="md">
+          <Box p={8} w={{ base: '100%', md: '80%' }} rounded="md">
             <FormContact />
           </Box>
         </Flex>

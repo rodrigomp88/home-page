@@ -1,7 +1,6 @@
 import { Container, Heading, SimpleGrid, Divider } from '@chakra-ui/react'
 import Layout from '../components/layouts/article'
-import Section from '../components/section'
-import { WorkGridItem } from '../components/grid-item'
+import { WorkGridItem, Section } from '../components'
 
 import thumbListaGasto from '../public/images/proyects/lista-gastos.png'
 import thumbPasarela from '../public/images/proyects/stripe-mercado-pago.png'

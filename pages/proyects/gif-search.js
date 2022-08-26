@@ -10,20 +10,19 @@ import {
 import { IoLogoGithub } from 'react-icons/io5'
 import Layout from '../../components/layouts/article'
 import { ExternalLinkIcon } from '@chakra-ui/icons'
-import { Title, WorkImage, Meta } from '../../components/work'
-import P from '../../components/paragraph'
+import { Title, WorkImage, Meta, Paragraph } from '../../components'
 
 const Proyect = () => (
   <Layout title="Gif Search">
     <Container>
       <Title>Gif Search</Title>
-      <P>
+      <Paragraph>
         <Badge>Gif Search</Badge> buscador de gifs con la api de GYPHY.
-      </P>
-      <P>
+      </Paragraph>
+      <Paragraph>
         Busque los gif que desee ver, no me hago responsable por los resultados
         inadecuados o fuera de lugar que muestre la app.
-      </P>
+      </Paragraph>
       <List ml={4} my={4}>
         <ListItem>
           <Meta>URL</Meta>

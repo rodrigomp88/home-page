@@ -1,10 +1,11 @@
+import { useContext } from 'react'
 import { Container, Heading, Link, Button, Box, Flex } from '@chakra-ui/react'
-import { FormLogin } from '../components/form-login'
+import { AuthContext } from '../context'
+import { FormLogin } from '../components'
 import Layout from '../components/layouts/article'
-import { useAuth } from '../context/AuthContext'
 
 const Login = () => {
-  const { user } = useAuth()
+  const { user } = useContext(AuthContext)
 
   return (
     <Layout title="Login">
@@ -14,7 +15,7 @@ const Login = () => {
         </Heading>
 
         <Flex align="center" justify="center" mb={8}>
-          <Box p={8} w="80%" rounded="md">
+          <Box p={8} w={{ base: '100%', md: '80%' }} rounded="md">
             {user ? (
               <Link href="/admin">
                 <Button colorScheme="teal" isFullWidth>

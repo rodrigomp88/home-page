@@ -10,17 +10,16 @@ import {
 import { IoLogoGithub } from 'react-icons/io5'
 import Layout from '../../components/layouts/article'
 import { ExternalLinkIcon } from '@chakra-ui/icons'
-import { Title, WorkImage, Meta } from '../../components/work'
-import P from '../../components/paragraph'
+import { Title, WorkImage, Meta, Paragraph } from '../../components'
 
 const Proyect = () => (
   <Layout title="Bucar Imagenes">
     <Container>
       <Title>Bucar Imagenes</Title>
-      <P>
+      <Paragraph>
         <Badge>Bucar Imagenes</Badge>Buscar imagenes con la api de pixabay. El
         proyecto esta realizado con paginacion.
-      </P>
+      </Paragraph>
       <List ml={4} my={4}>
         <ListItem>
           <Meta>URL</Meta>

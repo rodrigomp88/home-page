@@ -10,17 +10,16 @@ import {
 import { IoLogoGithub } from 'react-icons/io5'
 import Layout from '../../components/layouts/article'
 import { ExternalLinkIcon } from '@chakra-ui/icons'
-import { Title, WorkImage, Meta } from '../../components/work'
-import P from '../../components/paragraph'
+import { Title, WorkImage, Meta, Paragraph } from '../../components'
 
 const Proyect = () => (
   <Layout title="Traductor">
     <Container>
       <Title>Traductor</Title>
-      <P>
+      <Paragraph>
         <Badge>Traductor</Badge>Clone del traductor de google con la api de
         google translate de rapidApi. Realizado con React, Node, Express, Axios
-      </P>
+      </Paragraph>
       <List ml={4} my={4}>
         <ListItem>
           <Meta>Stack</Meta>

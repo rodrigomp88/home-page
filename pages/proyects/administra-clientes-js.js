@@ -11,18 +11,17 @@ import {
 import { IoLogoGithub } from 'react-icons/io5'
 import Layout from '../../components/layouts/article'
 import { ExternalLinkIcon } from '@chakra-ui/icons'
-import { Title, WorkImage, Meta } from '../../components/work'
-import P from '../../components/paragraph'
+import { Title, WorkImage, Meta, Paragraph } from '../../components'
 
 const Proyect = () => (
   <Layout title="Administra clientes">
     <Container>
       <Title>Administra clientes</Title>
-      <P>
+      <Paragraph>
         <Badge>Administra clientes</Badge>CRUD de clientes en indexDB. Da de
         alta nuevos clientes, muestra todos los clientes, edita clientes ya
         existentes y elimina
-      </P>
+      </Paragraph>
       <List ml={4} my={4}>
         <ListItem>
           <Meta>URL</Meta>

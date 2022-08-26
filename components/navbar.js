@@ -1,5 +1,8 @@
-import Logo from './logo'
+import { useContext } from 'react'
 import NextLink from 'next/link'
+import { HamburgerIcon, UnlockIcon } from '@chakra-ui/icons'
+import { IoLogoGithub } from 'react-icons/io5'
+import { useTranslation } from 'react-i18next'
 import {
   Container,
   Box,
@@ -14,11 +17,8 @@ import {
   IconButton,
   useColorModeValue
 } from '@chakra-ui/react'
-import { HamburgerIcon, UnlockIcon } from '@chakra-ui/icons'
-import ThemeToggleButton from './theme-toggle-button'
-import { IoLogoGithub } from 'react-icons/io5'
-import { useTranslation } from 'react-i18next'
-import { useAuth } from '../context/AuthContext'
+import { AuthContext } from '../context'
+import { Logo, ThemeToggleButton } from './'
 
 const LinkItem = ({ href, path, _target, children, ...props }) => {
   const active = path === href
@@ -38,9 +38,9 @@ const LinkItem = ({ href, path, _target, children, ...props }) => {
   )
 }
 
-const Navbar = props => {
+export const Navbar = props => {
   const { t } = useTranslation()
-  const { user, logout } = useAuth()
+  const { user, logout } = useContext(AuthContext)
   const { path } = props
 
   const handleLogout = async () => {
@@ -106,16 +106,6 @@ const Navbar = props => {
             <IoLogoGithub />
             {t('navBar.code')}
           </LinkItem>
-          {/* <LinkItem
-            href="/login"
-            path={path}
-            display="inline-flex"
-            alignItems="center"
-            style={{ gap: 4 }}
-            pl={2}
-          >
-            <AtSignIcon />
-          </LinkItem> */}
         </Stack>
         {user && (
           <IconButton onClick={handleLogout} flex={1} align="right">
@@ -144,7 +134,7 @@ const Navbar = props => {
                   <MenuItem as={Link}>{t('navBar.contact')}</MenuItem>
                 </NextLink>
                 {user && (
-                  <NextLink href="/contact" passHref>
+                  <NextLink href="/admin" passHref>
                     <MenuItem as={Link}>{t('navBar.admin')}</MenuItem>
                   </NextLink>
                 )}
@@ -165,5 +155,3 @@ const Navbar = props => {
     </Box>
   )
 }
-
-export default Navbar

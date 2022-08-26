@@ -1,13 +1,20 @@
-import React from 'react'
-import { Button, FormControl, FormLabel, Input, VStack } from '@chakra-ui/react'
-import { useForm } from 'react-hook-form'
-import Paragraph from './paragraph'
+import { useContext } from 'react'
 import { useRouter } from 'next/router'
-import { useAuth } from '../context/AuthContext'
+import { useForm } from 'react-hook-form'
+import {
+  Alert,
+  AlertIcon,
+  Button,
+  FormControl,
+  FormLabel,
+  Input,
+  VStack
+} from '@chakra-ui/react'
+import { AuthContext } from '../context'
 
 export const FormLogin = () => {
   const router = useRouter()
-  const { login } = useAuth()
+  const { login } = useContext(AuthContext)
   const {
     register,
     handleSubmit,
@@ -28,7 +35,7 @@ export const FormLogin = () => {
       <form onSubmit={handleSubmit(onSubmit)}>
         <VStack spacing={4} align="flex-start">
           <FormControl>
-            <FormLabel htmlFor="email">Email</FormLabel>
+            <FormLabel htmlFor="email">Correo</FormLabel>
             <Input
               id="email"
               type="email"
@@ -37,21 +44,30 @@ export const FormLogin = () => {
                 required: 'El correo es requerido'
               })}
             />
-            {errors.email && <Paragraph>{errors.email.message}</Paragraph>}
+            {errors.email && (
+              <Alert status="warning" top={-1}>
+                <AlertIcon />
+                {errors.email.message}
+              </Alert>
+            )}
           </FormControl>
           <FormControl>
-            <FormLabel htmlFor="password">Password</FormLabel>
+            <FormLabel htmlFor="password">Contraseña</FormLabel>
             <Input
               id="password"
               type="password"
               name="password"
               {...register('password', {
-                required: 'El password es requerido'
+                required: 'La contraseña es requerida'
               })}
             />
-            {errors.email && <Paragraph>{errors.password.message}</Paragraph>}
+            {errors.email && (
+              <Alert status="warning" top={-1}>
+                <AlertIcon />
+                {errors.password.message}
+              </Alert>
+            )}
           </FormControl>
-
           <Button type="submit" colorScheme="teal" isFullWidth>
             Ingresar
           </Button>

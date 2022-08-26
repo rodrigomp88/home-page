@@ -122,6 +122,15 @@
     "@chakra-ui/react-utils" "1.2.2"
     "@chakra-ui/utils" "1.10.2"
 
+"@chakra-ui/alert@^2.0.9":
+  version "2.0.9"
+  resolved "https://registry.yarnpkg.com/@chakra-ui/alert/-/alert-2.0.9.tgz#25e88c105e095def374c9fe1e3c8a3f6fab08f6c"
+  integrity sha512-hFRIh6ZzQJ0sAESRym15mW/mcZE/yu4z6lFtdToBhpfSlhZLuE7gDdOTxqGkg417hY//48NiNXOCoQ2dUUuHKw==
+  dependencies:
+    "@chakra-ui/icon" "3.0.9"
+    "@chakra-ui/react-context" "2.0.3"
+    "@chakra-ui/spinner" "2.0.9"
+
 "@chakra-ui/anatomy@1.2.3":
   version "1.2.3"
   resolved "https://registry.yarnpkg.com/@chakra-ui/anatomy/-/anatomy-1.2.3.tgz#c3582942aa0e066fb09831c37992a27fa28fe9cd"
@@ -261,6 +270,13 @@
   integrity sha512-G2rB5DeeNM4VlsUv49OYGyRJhr6fKkSRDskOHE9yV9QmaIatnYmGZCnvrSALe1EmzJYD0g9wessEyPHId5KtaQ==
   dependencies:
     "@chakra-ui/utils" "1.10.2"
+
+"@chakra-ui/icon@3.0.9":
+  version "3.0.9"
+  resolved "https://registry.yarnpkg.com/@chakra-ui/icon/-/icon-3.0.9.tgz#ba127d9eefd727f62e9bce07a23eca39ae506744"
+  integrity sha512-P2Pwm/za6m1W1oqL2kGHH6XrrymsBjqYAFwOW2lB5Q6mI1e+RYe/iMxDoPSLHMYhqdfH7vyib/ffE3Vv3a5oTA==
+  dependencies:
+    "@chakra-ui/shared-utils" "2.0.1"
 
 "@chakra-ui/icons@^1.0.15":
   version "1.1.5"
@@ -420,6 +436,11 @@
     "@chakra-ui/utils" "1.10.2"
     "@chakra-ui/visually-hidden" "1.1.4"
 
+"@chakra-ui/react-context@2.0.3":
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/@chakra-ui/react-context/-/react-context-2.0.3.tgz#e988be62f5f5fe29d6a8496c79cbf934f840fa5a"
+  integrity sha512-KmPq6sb1y05WsOUqXZtBBC4LsNKZIFrp2thTsLBwcuH7lkXZwPMHmJGKa9K980P+SWEgfH2s2PY2z+QrIuqWGg==
+
 "@chakra-ui/react-env@1.1.4":
   version "1.1.4"
   resolved "https://registry.yarnpkg.com/@chakra-ui/react-env/-/react-env-1.1.4.tgz#62977f15a7ede52d5b99a1f0f526d2216ceb006d"
@@ -495,6 +516,11 @@
     "@chakra-ui/form-control" "1.5.6"
     "@chakra-ui/utils" "1.10.2"
 
+"@chakra-ui/shared-utils@2.0.1":
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/@chakra-ui/shared-utils/-/shared-utils-2.0.1.tgz#41e314e42c96039e8ffb265e73145cf755813ab4"
+  integrity sha512-NXDBl/u4wrSNp0ON5R3r3evkRurrAz2yuO7neooaG+O5HEenVouGqm4CsXd6lUAPmjwiGzA0LQFNCt0Hj92dXg==
+
 "@chakra-ui/skeleton@1.2.9":
   version "1.2.9"
   resolved "https://registry.yarnpkg.com/@chakra-ui/skeleton/-/skeleton-1.2.9.tgz#c9e6a7b80f70dbdcdd6f0542051d8fe79e57a61b"
@@ -521,6 +547,11 @@
   dependencies:
     "@chakra-ui/utils" "1.10.2"
     "@chakra-ui/visually-hidden" "1.1.4"
+
+"@chakra-ui/spinner@2.0.9":
+  version "2.0.9"
+  resolved "https://registry.yarnpkg.com/@chakra-ui/spinner/-/spinner-2.0.9.tgz#1d8544cc136699a590c3f5c518ae2c14abb459cf"
+  integrity sha512-9ALl51fiVWptDu2J2xcv0TSfGf4buumpHrEXHvV2Qy+HZ6rYnUmSThBSb/VgoQS+rASG8bAbLUPlQTQ+v9ibFg==
 
 "@chakra-ui/stat@1.2.5":
   version "1.2.5"
@@ -1914,11 +1945,6 @@ classnames@2.2.6:
   version "2.2.6"
   resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.2.6.tgz#43935bffdd291f326dad0a205309b38d00f650ce"
   integrity sha512-JR/iSQOSt+LQIWwrwEzJ9uk0xfN3mTVYMwt1Ir5mUcSN6pU+V4zQFFaJsclJbPuAUQH+yfWef6tm7l1quW3C8Q==
-
-classnames@^2.2.5:
-  version "2.3.1"
-  resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.3.1.tgz#dfcfa3891e306ec1dad105d0e88f4417b8535e8e"
-  integrity sha512-OlQdbZ7gLfGarSqxesMesDa5uz7KFbID8Kpq/SxIoNGDqY8lSYs0D+hhtBXhcdB3rcbXArFr7vlHheLk1voeNA==
 
 cliui@^7.0.2:
   version "7.0.4"
@@ -3944,7 +3970,7 @@ promise-polyfill@8.1.3:
   resolved "https://registry.yarnpkg.com/promise-polyfill/-/promise-polyfill-8.1.3.tgz#8c99b3cf53f3a91c68226ffde7bde81d7f904116"
   integrity sha512-MG5r82wBzh7pSKDRa9y+vllNHz3e3d4CNj1PQE4BQYxLme0gKYYBm9YENq+UkEikyZ0XbiGWxYlVw3Rl9O/U8g==
 
-prop-types@^15.5.8, prop-types@^15.6.2, prop-types@^15.7.2:
+prop-types@^15.6.2, prop-types@^15.7.2:
   version "15.8.1"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.8.1.tgz#67d87bf1a694f48435cf332c24af10214a3140b5"
   integrity sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==
@@ -4067,13 +4093,6 @@ react-dom@^17.0.2:
     object-assign "^4.1.1"
     scheduler "^0.20.2"
 
-react-easy-swipe@^0.0.21:
-  version "0.0.21"
-  resolved "https://registry.yarnpkg.com/react-easy-swipe/-/react-easy-swipe-0.0.21.tgz#ce9384d576f7a8529dc2ca377c1bf03920bac8eb"
-  integrity sha512-OeR2jAxdoqUMHIn/nS9fgreI5hSpgGoL5ezdal4+oO7YSSgJR8ga+PkYGJrSrJ9MKlPcQjMQXnketrD7WNmNsg==
-  dependencies:
-    prop-types "^15.5.8"
-
 react-fast-compare@3.2.0:
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/react-fast-compare/-/react-fast-compare-3.2.0.tgz#641a9da81b6a6320f270e89724fb45a0b39e43bb"
@@ -4143,15 +4162,6 @@ react-remove-scroll@2.4.1:
     tslib "^1.0.0"
     use-callback-ref "^1.2.3"
     use-sidecar "^1.0.1"
-
-react-responsive-carousel@^3.2.23:
-  version "3.2.23"
-  resolved "https://registry.yarnpkg.com/react-responsive-carousel/-/react-responsive-carousel-3.2.23.tgz#4c0016ff54603e604bb5c1f9e7ef2d1eda133f1d"
-  integrity sha512-pqJLsBaKHWJhw/ItODgbVoziR2z4lpcJg+YwmRlSk4rKH32VE633mAtZZ9kDXjy4wFO+pgUZmDKPsPe1fPmHCg==
-  dependencies:
-    classnames "^2.2.5"
-    prop-types "^15.5.8"
-    react-easy-swipe "^0.0.21"
 
 react-style-singleton@^2.1.0:
   version "2.1.1"

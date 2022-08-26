@@ -10,19 +10,18 @@ import {
 import { IoLogoGithub } from 'react-icons/io5'
 import Layout from '../../components/layouts/article'
 import { ExternalLinkIcon } from '@chakra-ui/icons'
-import { Title, WorkImage, Meta } from '../../components/work'
-import P from '../../components/paragraph'
+import { Title, WorkImage, Meta, Paragraph } from '../../components'
 
 const Proyect = () => (
   <Layout title="Gastos semanales">
     <Container>
       <Title>Gastos semanales</Title>
-      <P>
+      <Paragraph>
         <Badge>Gastos semanales</Badge> controla gastos semanales, tiene alertas
         dependiendo si te queda menos del 50% del presupuesto(amarrillo) y si te
         queda menos del 25% del presupuesto(rojo), Proyecto realizado con
         clases.
-      </P>
+      </Paragraph>
       <List ml={4} my={4}>
         <ListItem>
           <Meta>URL</Meta>

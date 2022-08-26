@@ -11,22 +11,21 @@ import {
 import { IoLogoGithub } from 'react-icons/io5'
 import Layout from '../../components/layouts/article'
 import { ExternalLinkIcon } from '@chakra-ui/icons'
-import { Title, WorkImage, Meta } from '../../components/work'
-import P from '../../components/paragraph'
+import { Title, WorkImage, Meta, Paragraph } from '../../components'
 
 const Proyect = () => (
   <Layout title="Ecommerce">
     <Container>
       <Title>Ecommerce</Title>
-      <P>
+      <Paragraph>
         <Badge>Ecommerce</Badge> Ecommerce cuenta con context para el manejo del
         estado de la aplicacion, cookies para el almacenamiento de carrito, Next
         Auth para la sesion de usuario, Paypal para la pasarela de pago.
-      </P>
-      <P>
+      </Paragraph>
+      <Paragraph>
         Panel de administracion para ver el inventario totalde productos ordenes
         y usuarios y cambio de privilegios de los usuarios
-      </P>
+      </Paragraph>
       <List ml={4} my={4}>
         <ListItem>
           <Meta>URL</Meta>

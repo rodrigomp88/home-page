@@ -10,19 +10,18 @@ import {
 import { IoLogoGithub } from 'react-icons/io5'
 import Layout from '../../components/layouts/article'
 import { ExternalLinkIcon } from '@chakra-ui/icons'
-import { Title, WorkImage, Meta } from '../../components/work'
-import P from '../../components/paragraph'
+import { Title, WorkImage, Meta, Paragraph } from '../../components'
 
 const Proyect = () => (
   <Layout title="Cotizador Seguros">
     <Container>
       <Title>Cotizador Seguros</Title>
-      <P>
+      <Paragraph>
         <Badge>Cotizador Seguros</Badge> Cotizador de seguros de autos, la app
         cuenta con validaciones para no enviar datos vacios calculos en base el
         tipo del seguro, el año y si es completo o basico. Esta realizado con
         Prototypes.
-      </P>
+      </Paragraph>
       <List ml={4} my={4}>
         <ListItem>
           <Meta>URL</Meta>

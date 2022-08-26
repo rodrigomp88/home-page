@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { Text, useColorModeValue } from '@chakra-ui/react'
 import styled from '@emotion/styled'
+import { Text, useColorModeValue } from '@chakra-ui/react'
 
 const LogoBox = styled.span`
   font-weight: bold;
@@ -21,7 +21,7 @@ const LogoBox = styled.span`
   }
 `
 
-const Logo = () => {
+export const Logo = () => {
   const laptopPrintImg = `/images/laptop${useColorModeValue('', '-dark')}.png`
 
   return (
@@ -41,5 +41,3 @@ const Logo = () => {
     </Link>
   )
 }
-
-export default Logo

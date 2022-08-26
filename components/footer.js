@@ -13,7 +13,7 @@ import {
 import { useTranslation } from 'react-i18next'
 import { IoLogoLinkedin, IoLogoGithub } from 'react-icons/io5'
 
-const Footer = () => {
+export const Footer = () => {
   const { t } = useTranslation()
 
   return (
@@ -52,5 +52,3 @@ const Footer = () => {
     </Box>
   )
 }
-
-export default Footer
