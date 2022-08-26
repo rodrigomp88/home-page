@@ -1,4 +1,4 @@
-// import { useRouter } from 'next/router'
+import { useRouter } from 'next/router'
 import {
   Alert,
   AlertIcon,
@@ -12,7 +12,7 @@ import {
 import { useForm } from 'react-hook-form'
 
 export const FormContact = () => {
-  // const router = useRouter()
+  const router = useRouter()
   const {
     register,
     handleSubmit,
@@ -34,7 +34,7 @@ export const FormContact = () => {
         ...data
       })
     })
-      .then(data => console.log(data))
+      .then(() => router.push('/success'))
       .catch(error => alert(error))
   }
 
