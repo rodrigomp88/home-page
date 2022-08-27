@@ -7,17 +7,20 @@ import {
   Divider,
   Button
 } from '@chakra-ui/react'
+import { NotAllowedIcon, ArrowBackIcon } from '@chakra-ui/icons'
 
 const NotFound = () => {
   return (
-    <Container>
-      <Heading as="h1">Emmm! No</Heading>
-      <Text>La página que estas buscando no fue encontrada.</Text>
+    <Container mt={10}>
+      <Heading as="h1">Emmm? 404¡</Heading>
+      <Text my={2}>La página que estas buscando no fue encontrada.</Text>
       <Divider my={6} />
-
+      <Box align="center" my={10}>
+        <NotAllowedIcon fontSize={80} />
+      </Box>
       <Box my={6} align="center">
         <NextLink href="/">
-          <Button colorScheme="teal">Volver al inicio</Button>
+          <Button leftIcon={<ArrowBackIcon />}>Volver al inicio</Button>
         </NextLink>
       </Box>
     </Container>
