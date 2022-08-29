@@ -1,29 +1,27 @@
 import NextLink from 'next/link'
-import {
-  Box,
-  Heading,
-  Text,
-  Container,
-  Divider,
-  Button
-} from '@chakra-ui/react'
+import { Box, Container, Button } from '@chakra-ui/react'
 import { NotAllowedIcon, ArrowBackIcon } from '@chakra-ui/icons'
+import { HeadingText } from '../components'
+import Layout from '../components/layouts/article'
 
 const NotFound = () => {
   return (
-    <Container mt={10}>
-      <Heading as="h1">Emmm? 404¡</Heading>
-      <Text my={2}>La página que estas buscando no fue encontrada.</Text>
-      <Divider my={6} />
-      <Box align="center" my={10}>
-        <NotAllowedIcon fontSize={80} />
-      </Box>
-      <Box my={6} align="center">
-        <NextLink href="/">
-          <Button leftIcon={<ArrowBackIcon />}>Volver al inicio</Button>
-        </NextLink>
-      </Box>
-    </Container>
+    <Layout title="Página no encontrada">
+      <Container>
+        <HeadingText
+          title={'404'}
+          subTitle={'¡Página no encontrada! '}
+          icon={<NotAllowedIcon />}
+        />
+        <Box my={10} align="center">
+          <NextLink href="/">
+            <Button colorScheme="teal" leftIcon={<ArrowBackIcon />}>
+              Volver al inicio
+            </Button>
+          </NextLink>
+        </Box>
+      </Container>
+    </Layout>
   )
 }
 

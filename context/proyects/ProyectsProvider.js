@@ -5,15 +5,15 @@ import {
   onAuthStateChanged
 } from 'firebase/auth'
 import { auth } from '../../config/firebase'
-import { AuthContext, authReducer } from './'
+import { ProyectsContext, proyectsReducer } from './'
 
 const AUTH_INITIAL_STATE = {
   isLoggedIn: false,
   user: undefined
 }
 
-export const AuthProvider = ({ children }) => {
-  const [state, dispatch] = useReducer(authReducer, AUTH_INITIAL_STATE)
+export const ProyectsProvider = ({ children }) => {
+  const [state, dispatch] = useReducer(proyectsReducer, AUTH_INITIAL_STATE)
 
   //   const [loading, setLoading] = useState(true)
 
@@ -45,7 +45,7 @@ export const AuthProvider = ({ children }) => {
   }
 
   return (
-    <AuthContext.Provider
+    <ProyectsContext.Provider
       value={{
         ...state,
 
@@ -55,6 +55,6 @@ export const AuthProvider = ({ children }) => {
       }}
     >
       {children}
-    </AuthContext.Provider>
+    </ProyectsContext.Provider>
   )
 }

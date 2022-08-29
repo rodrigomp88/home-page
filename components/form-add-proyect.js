@@ -13,7 +13,7 @@ import {
 import { AtSignIcon } from '@chakra-ui/icons'
 import { AuthContext } from '../context'
 
-export const FormLogin = () => {
+export const FormAddProyect = () => {
   const router = useRouter()
   const { login } = useContext(AuthContext)
   const {
@@ -36,36 +36,19 @@ export const FormLogin = () => {
       <form onSubmit={handleSubmit(onSubmit)}>
         <VStack spacing={4} w={{ base: 'auto', md: 'sm' }}>
           <FormControl>
-            <FormLabel htmlFor="email">Correo</FormLabel>
+            <FormLabel htmlFor="name">Nombre del proyecto</FormLabel>
             <Input
-              id="email"
-              type="email"
-              name="email"
-              {...register('email', {
-                required: 'El correo es requerido'
+              id="name"
+              type="name"
+              name="name"
+              {...register('name', {
+                required: 'El proyecto es requerido'
               })}
             />
-            {errors.email && (
+            {errors.name && (
               <Alert status="warning" top={-1}>
                 <AlertIcon />
-                {errors.email.message}
-              </Alert>
-            )}
-          </FormControl>
-          <FormControl>
-            <FormLabel htmlFor="password">Contraseña</FormLabel>
-            <Input
-              id="password"
-              type="password"
-              name="password"
-              {...register('password', {
-                required: 'La contraseña es requerida'
-              })}
-            />
-            {errors.email && (
-              <Alert status="warning" top={-1}>
-                <AlertIcon />
-                {errors.password.message}
+                {errors.name.message}
               </Alert>
             )}
           </FormControl>

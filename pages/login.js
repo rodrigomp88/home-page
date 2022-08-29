@@ -1,6 +1,6 @@
 import { useContext } from 'react'
 import { Container, Link, Button, Box } from '@chakra-ui/react'
-import { NotAllowedIcon } from '@chakra-ui/icons'
+import { NotAllowedIcon, ArrowBackIcon } from '@chakra-ui/icons'
 import { AuthContext } from '../context'
 import { FormLogin, HeadingText, WarningText } from '../components'
 import Layout from '../components/layouts/article'
@@ -13,21 +13,23 @@ const LoginPage = () => {
       <Container>
         <HeadingText
           title={'Login'}
-          subTitle={'¡Solo para el administrador! '}
+          subTitle={
+            !user ? '¡Solo para el administrador!' : '¡Ya estás logueado!'
+          }
           icon={<NotAllowedIcon />}
         />
-        <Box w={{ base: '100%', md: '80%' }} rounded="md" align="center">
-          {user ? (
-            <Link href="/admin">
-              <Button colorScheme="teal" isFullWidth>
-                Ya estas logeado
-              </Button>
-            </Link>
-          ) : (
+        <Box my={10} align="center">
+          {!user ? (
             <Container>
               <FormLogin />
               <WarningText />
             </Container>
+          ) : (
+            <Link href="/admin">
+              <Button colorScheme="teal" leftIcon={<ArrowBackIcon />}>
+                Admin
+              </Button>
+            </Link>
           )}
         </Box>
       </Container>

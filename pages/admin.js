@@ -1,6 +1,6 @@
 import { useContext } from 'react'
 import { Container, Button, Box, Link } from '@chakra-ui/react'
-import { NotAllowedIcon, AtSignIcon, EditIcon } from '@chakra-ui/icons'
+import { NotAllowedIcon, ArrowBackIcon, EditIcon } from '@chakra-ui/icons'
 import { AuthContext } from '../context'
 import Layout from '../components/layouts/article'
 import { HeadingText, WarningText, ProyectsPost } from '../components'
@@ -18,28 +18,24 @@ const AdminPage = () => {
               subTitle={'¡Solo para el administrador! '}
               icon={<NotAllowedIcon />}
             />
-            <Box w={{ base: '100%', md: '80%' }} rounded="md" align="center">
-              <Link href="/login" my={5}>
-                <Button
-                  colorScheme="teal"
-                  isFullWidth
-                  leftIcon={<AtSignIcon />}
-                >
+            <Box my={10} align="center">
+              <Link href="/login">
+                <Button colorScheme="teal" leftIcon={<ArrowBackIcon />}>
                   Login
                 </Button>
               </Link>
-              <WarningText />
             </Box>
+            <WarningText />
           </>
         ) : (
-          <>
+          <Box mb={10}>
             <HeadingText
               title={'Dashboard'}
-              subTitle={`Bienvenido`}
+              subTitle={`Bienvenido: "${user.email}`}
               icon={<EditIcon />}
             />
             <ProyectsPost />
-          </>
+          </Box>
         )}
       </Container>
     </Layout>
