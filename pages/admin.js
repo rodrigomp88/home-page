@@ -31,7 +31,7 @@ const AdminPage = () => {
           <Box mb={10}>
             <HeadingText
               title={'Dashboard'}
-              subTitle={`Bienvenido: "${user.email}`}
+              subTitle={`Bienvenido: "${user.email}"`}
               icon={<EditIcon />}
             />
             <ProyectsPost />

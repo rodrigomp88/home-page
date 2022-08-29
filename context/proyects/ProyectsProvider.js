@@ -1,57 +1,40 @@
-import { useEffect, useReducer } from 'react'
-import {
-  signInWithEmailAndPassword,
-  signOut,
-  onAuthStateChanged
-} from 'firebase/auth'
-import { auth } from '../../config/firebase'
+import { useReducer } from 'react'
+import { types } from '../../types/types'
 import { ProyectsContext, proyectsReducer } from './'
 
-const AUTH_INITIAL_STATE = {
-  isLoggedIn: false,
-  user: undefined
+const PROYECTS_INITIAL_STATE = {
+  proyectos: [
+    {
+      id: 1,
+      name: 'Galpon de ajos',
+      description: 'Lleno de bolivianos'
+    }
+  ]
 }
 
 export const ProyectsProvider = ({ children }) => {
-  const [state, dispatch] = useReducer(proyectsReducer, AUTH_INITIAL_STATE)
+  const [state, dispatch] = useReducer(proyectsReducer, PROYECTS_INITIAL_STATE)
 
-  //   const [loading, setLoading] = useState(true)
-
-  useEffect(() => {
-    const unsubuscribe = onAuthStateChanged(auth, currentUser => {
-      if (!currentUser) {
-        dispatch({ type: '[Auth] - Logout' })
-        return true
-      }
-      dispatch({ type: '[Auth] - Login', payload: currentUser })
-      return true
-    })
-    return () => unsubuscribe()
-  }, [])
-
-  const login = async (email, password) => {
-    try {
-      const { data } = await signInWithEmailAndPassword(auth, email, password)
-      const { user } = data
-      dispatch({ type: '[Auth] - Login', payload: user })
-      return true
-    } catch (error) {
-      return false
-    }
+  const addProyect = proyect => {
+    dispatch({ type: types.addProyect, payload: proyect })
   }
 
-  const logout = async () => {
-    await signOut(auth)
+  const editProyect = proyect => {
+    dispatch({ type: types.editProyect, payload: proyect })
+  }
+
+  const deleteProyect = id => {
+    dispatch({ types: types.deleteProyect, payload: id })
   }
 
   return (
     <ProyectsContext.Provider
       value={{
-        ...state,
+        proyectos: state.proyectos,
 
-        login,
-        logout
-        // loading
+        addProyect,
+        editProyect,
+        deleteProyect
       }}
     >
       {children}

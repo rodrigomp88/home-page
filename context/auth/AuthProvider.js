@@ -6,6 +6,7 @@ import {
 } from 'firebase/auth'
 import { auth } from '../../config/firebase'
 import { AuthContext, authReducer } from './'
+import { types } from '../../types/types'
 
 const AUTH_INITIAL_STATE = {
   isLoggedIn: false,
@@ -20,10 +21,10 @@ export const AuthProvider = ({ children }) => {
   useEffect(() => {
     const unsubuscribe = onAuthStateChanged(auth, currentUser => {
       if (!currentUser) {
-        dispatch({ type: '[Auth] - Logout' })
+        dispatch({ type: types.logout })
         return true
       }
-      dispatch({ type: '[Auth] - Login', payload: currentUser })
+      dispatch({ type: types.login, payload: currentUser })
       return true
     })
     return () => unsubuscribe()
@@ -33,7 +34,7 @@ export const AuthProvider = ({ children }) => {
     try {
       const { data } = await signInWithEmailAndPassword(auth, email, password)
       const { user } = data
-      dispatch({ type: '[Auth] - Login', payload: user })
+      dispatch({ type: types.login, payload: user })
       return true
     } catch (error) {
       return false

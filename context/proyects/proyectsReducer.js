@@ -1,17 +1,32 @@
+import { types } from '../../types/types'
+
 export const proyectsReducer = (state, action) => {
   switch (action.type) {
-    case '[Auth] - Login':
+    case types.addProyect:
       return {
         ...state,
-        isLoggedIn: true,
-        user: action.payload
+        proyectos: [...state.proyectos, action.payload]
       }
 
-    case '[Auth] - Logout':
+    case types.updateProyect:
+      const updateProyecto = action.payload
+      const updateProyectos = state.proyectos.map(proyecto => {
+        if (proyecto.id === updateProyecto.id) {
+          return updateProyecto
+        }
+        return proyecto
+      })
       return {
         ...state,
-        isLoggedIn: false,
-        user: undefined
+        proyectos: updateProyectos
+      }
+
+    case types.deleteProyect:
+      return {
+        ...state,
+        proyectos: state.proyectos.filter(
+          proyecto => proyecto.id !== action.payload
+        )
       }
 
     default:

@@ -1,8 +1,5 @@
 import { useContext } from 'react'
 import NextLink from 'next/link'
-import { HamburgerIcon, UnlockIcon } from '@chakra-ui/icons'
-import { IoLogoGithub } from 'react-icons/io5'
-import { useTranslation } from 'react-i18next'
 import {
   Container,
   Box,
@@ -11,12 +8,22 @@ import {
   Heading,
   Flex,
   Menu,
-  MenuItem,
   MenuList,
   MenuButton,
   IconButton,
+  Tooltip,
   useColorModeValue
 } from '@chakra-ui/react'
+import { HamburgerIcon } from '@chakra-ui/icons'
+import {
+  IoLogoGithub,
+  IoHomeOutline,
+  IoExit,
+  IoMailOpenOutline,
+  IoPencil,
+  IoFolderOutline
+} from 'react-icons/io5'
+import { useTranslation } from 'react-i18next'
 import { AuthContext } from '../context'
 import { Logo, ThemeToggleButton } from './'
 
@@ -26,8 +33,12 @@ const LinkItem = ({ href, path, _target, children, ...props }) => {
   return (
     <NextLink href={href} passHref>
       <Link
+        display="flex"
+        alignItems="center"
+        gap={2}
         p={2}
         bg={active ? 'grassTeal' : undefined}
+        rounded={{ base: 'none', md: 'md' }}
         color={active ? '#202023' : inactiveColor}
         _target={_target}
         {...props}
@@ -107,12 +118,14 @@ export const Navbar = props => {
             {t('navBar.code')}
           </LinkItem>
         </Stack>
-        {user && (
-          <IconButton onClick={handleLogout} flex={1} align="right">
-            <UnlockIcon />
-          </IconButton>
-        )}
         <Box flex={1} align="right">
+          {user && (
+            <Tooltip label="Salir" placement="bottom">
+              <IconButton colorScheme={'red'} onClick={handleLogout} mr={2}>
+                <IoExit />
+              </IconButton>
+            </Tooltip>
+          )}
           <ThemeToggleButton />
 
           <Box ml={2} display={{ base: 'inline-block', md: 'none' }}>
@@ -124,29 +137,32 @@ export const Navbar = props => {
                 aria-label="Options"
               />
               <MenuList>
-                <NextLink href="/" passHref>
-                  <MenuItem as={Link}>{t('navBar.about')}</MenuItem>
-                </NextLink>
-                <NextLink href="/proyects" passHref>
-                  <MenuItem as={Link}>{t('navBar.projects')}</MenuItem>
-                </NextLink>
-                <NextLink href="/contact" passHref>
-                  <MenuItem as={Link}>{t('navBar.contact')}</MenuItem>
-                </NextLink>
+                <LinkItem href="/" path={path}>
+                  <IoHomeOutline />
+                  {t('navBar.about')}
+                </LinkItem>
+                <LinkItem href="/proyects" path={path}>
+                  <IoFolderOutline />
+                  {t('navBar.projects')}
+                </LinkItem>
+                <LinkItem href="/contact" path={path}>
+                  <IoMailOpenOutline />
+                  {t('navBar.contact')}
+                </LinkItem>
                 {user && (
-                  <NextLink href="/admin" passHref>
-                    <MenuItem as={Link}>{t('navBar.admin')}</MenuItem>
-                  </NextLink>
+                  <LinkItem href="/admin" path={path}>
+                    <IoPencil />
+                    {t('navBar.admin')}
+                  </LinkItem>
                 )}
-                <MenuItem
-                  as={Link}
+                <LinkItem
+                  path={path}
                   target="_blank"
                   href="https://github.com/rodrigomp88/home-page"
-                  style={{ gap: 4 }}
                 >
                   <IoLogoGithub />
                   {t('navBar.code')}
-                </MenuItem>
+                </LinkItem>
               </MenuList>
             </Menu>
           </Box>
