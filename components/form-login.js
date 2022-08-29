@@ -10,6 +10,7 @@ import {
   Input,
   VStack
 } from '@chakra-ui/react'
+import { AtSignIcon } from '@chakra-ui/icons'
 import { AuthContext } from '../context'
 
 export const FormLogin = () => {
@@ -68,7 +69,12 @@ export const FormLogin = () => {
               </Alert>
             )}
           </FormControl>
-          <Button type="submit" colorScheme="teal" isFullWidth>
+          <Button
+            type="submit"
+            leftIcon={<AtSignIcon />}
+            colorScheme="teal"
+            isFullWidth
+          >
             Ingresar
           </Button>
         </VStack>
