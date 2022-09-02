@@ -10,6 +10,7 @@ import {
   Menu,
   MenuList,
   MenuButton,
+  MenuItem,
   IconButton,
   Tooltip,
   useColorModeValue
@@ -20,7 +21,7 @@ import {
   IoHomeOutline,
   IoExit,
   IoMailOpenOutline,
-  IoPencil,
+  IoSettingsOutline,
   IoFolderOutline
 } from 'react-icons/io5'
 import { useTranslation } from 'react-i18next'
@@ -29,13 +30,11 @@ import { Logo, ThemeToggleButton } from './'
 
 const LinkItem = ({ href, path, _target, children, ...props }) => {
   const active = path === href
-  const inactiveColor = useColorModeValue('gray900', 'whiteAlpha.900')
+  const inactiveColor = useColorModeValue('gray900', 'whiteAlpha.700')
   return (
     <NextLink href={href} passHref>
       <Link
         display="flex"
-        alignItems="center"
-        gap={2}
         p={2}
         bg={active ? 'grassTeal' : undefined}
         rounded={{ base: 'none', md: 'md' }}
@@ -51,8 +50,8 @@ const LinkItem = ({ href, path, _target, children, ...props }) => {
 
 export const Navbar = props => {
   const { t } = useTranslation()
-  const { user, logout } = useContext(AuthContext)
   const { path } = props
+  const { user, logout } = useContext(AuthContext)
 
   const handleLogout = async () => {
     try {
@@ -71,6 +70,7 @@ export const Navbar = props => {
       css={{ backdropFilter: 'blur(10px)' }}
       zIndex={1}
       {...props}
+      boxShadow="lg"
     >
       <Container
         display="flex"
@@ -138,21 +138,29 @@ export const Navbar = props => {
               />
               <MenuList>
                 <LinkItem href="/" path={path}>
-                  <IoHomeOutline />
-                  {t('navBar.about')}
+                  <MenuItem gap={2}>
+                    <IoHomeOutline />
+                    {t('navBar.about')}
+                  </MenuItem>
                 </LinkItem>
                 <LinkItem href="/proyects" path={path}>
-                  <IoFolderOutline />
-                  {t('navBar.projects')}
+                  <MenuItem gap={2}>
+                    <IoFolderOutline />
+                    {t('navBar.projects')}
+                  </MenuItem>
                 </LinkItem>
                 <LinkItem href="/contact" path={path}>
-                  <IoMailOpenOutline />
-                  {t('navBar.contact')}
+                  <MenuItem gap={2}>
+                    <IoMailOpenOutline />
+                    {t('navBar.contact')}
+                  </MenuItem>
                 </LinkItem>
                 {user && (
                   <LinkItem href="/admin" path={path}>
-                    <IoPencil />
-                    {t('navBar.admin')}
+                    <MenuItem gap={2}>
+                      <IoSettingsOutline />
+                      {t('navBar.admin')}
+                    </MenuItem>
                   </LinkItem>
                 )}
                 <LinkItem
@@ -160,8 +168,10 @@ export const Navbar = props => {
                   target="_blank"
                   href="https://github.com/rodrigomp88/home-page"
                 >
-                  <IoLogoGithub />
-                  {t('navBar.code')}
+                  <MenuItem gap={2}>
+                    <IoLogoGithub />
+                    {t('navBar.code')}
+                  </MenuItem>
                 </LinkItem>
               </MenuList>
             </Menu>

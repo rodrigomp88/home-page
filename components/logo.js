@@ -1,3 +1,4 @@
+import NextLink from 'next/link'
 import styled from '@emotion/styled'
 import { Text, useColorModeValue, Link } from '@chakra-ui/react'
 import { IoDesktopSharp } from 'react-icons/io5'
@@ -23,17 +24,19 @@ const LogoBox = styled.span`
 
 export const Logo = () => {
   return (
-    <Link href="/">
-      <LogoBox>
-        <IoDesktopSharp />
-        <Text
-          color={useColorModeValue('gray.800', 'whiteAlpha.900')}
-          fontFamily='M PLUS Rounded 1c", sans-serif'
-          as="h1"
-        >
-          RP
-        </Text>
-      </LogoBox>
-    </Link>
+    <NextLink href="/" passHref>
+      <Link>
+        <LogoBox>
+          <IoDesktopSharp />
+          <Text
+            color={useColorModeValue('gray.800', 'whiteAlpha.900')}
+            fontFamily='M PLUS Rounded 1c", sans-serif'
+            as="h1"
+          >
+            RP
+          </Text>
+        </LogoBox>
+      </Link>
+    </NextLink>
   )
 }

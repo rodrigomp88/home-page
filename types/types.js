@@ -3,6 +3,7 @@ export const types = {
   logout: '[Auth] - Logout',
 
   addProyect: '[Proyect] - add',
+  getProyects: '[Proyects] - get',
   editProyect: '[Proyect] - edit',
   deleteProyect: '[Proyect] - delete'
 }
