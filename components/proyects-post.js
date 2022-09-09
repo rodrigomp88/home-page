@@ -3,6 +3,7 @@ import {
   Box,
   Grid,
   Container,
+  Image,
   Text,
   Icon,
   TableContainer,
@@ -13,43 +14,63 @@ import {
   Th,
   Tbody,
   Td,
-  Image,
   Button,
   Tooltip
 } from '@chakra-ui/react'
-import { IoClipboardOutline, IoCreate, IoTrashOutline } from 'react-icons/io5'
-import { collection, getDocs } from 'firebase/firestore'
+import { IoClipboardOutline, IoTrashOutline } from 'react-icons/io5'
+import {
+  collection,
+  // deleteDoc,
+  // doc,
+  orderBy,
+  onSnapshot,
+  query,
+  doc
+  // updateDoc
+} from 'firebase/firestore'
+// import Image from 'next/image'
 import { db } from '../config/firebase'
 import { FormAddProyect } from './'
-
-const dbInstance = collection(db, 'proyects')
+import { FormUpdateProyect } from './form-update-proyect'
 
 export const ProyectsPost = () => {
-  const [proyectsArray, setProyectsArray] = useState([])
+  const [proyects, setProyects] = useState([])
+
+  console.log(proyects.images?.map(f => ({ f })))
 
   useEffect(() => {
     getProyects()
   }, [])
 
   const getProyects = () => {
-    getDocs(dbInstance).then(data => {
-      setProyectsArray(
-        data.docs.map(item => {
-          return { ...item.data(), id: item.id }
-        })
+    const collectionRef = collection(db, 'proyects')
+    const q = query(collectionRef, orderBy('timestamp', 'desc'))
+    const unsubscribe = onSnapshot(q, querySnapshot => {
+      setProyects(
+        querySnapshot.docs.map(doc => ({
+          ...doc.data(),
+          id: doc.id,
+          timestamp: doc.data().timestamp?.toDate().getTime()
+        }))
       )
     })
+    return unsubscribe
+  }
+
+  const deleteProyect = async id => {
+    const proyectDoc = doc(collection(db, 'proyects'), id)
+    await deleteDoc(proyectDoc)
   }
 
   return (
     <Container>
       <FormAddProyect />
 
-      {proyectsArray.length > 0 ? (
+      {proyects.length > 0 ? (
         <>
           <TableContainer boxShadow="lg" p="1" rounded="md">
             <Table variant="striped" colorScheme="teal">
-              <TableCaption>{`Proyectos subidos: "${proyectsArray.length}"`}</TableCaption>
+              <TableCaption>{`Proyectos subidos: "${proyects.length}"`}</TableCaption>
               <Thead>
                 <Tr>
                   <Th>Titulo</Th>
@@ -58,25 +79,28 @@ export const ProyectsPost = () => {
                 </Tr>
               </Thead>
               <Tbody>
-                {proyectsArray.map(proyect => (
+                {proyects.map(proyect => (
                   <Tr key={proyect.id}>
                     <Td>{proyect.title.slice(0, 13)}</Td>
                     <Td display={{ base: 'none', md: 'flex' }}>
                       <Image
-                        src={proyect.image}
+                        src={proyect.images}
                         alt=""
-                        boxSize="70px"
                         rounded="md"
+                        height={50}
+                        width={50}
                       />
                     </Td>
                     <Td>
-                      <Tooltip label="Editar" placement="top">
-                        <Button colorScheme="yellow">
-                          <IoCreate />
-                        </Button>
-                      </Tooltip>
+                      <FormUpdateProyect />
                       <Tooltip label="Eliminar" placement="top">
-                        <Button ml={5} colorScheme="red">
+                        <Button
+                          ml={5}
+                          colorScheme="red"
+                          onClick={() => {
+                            deleteProyect(proyect.id)
+                          }}
+                        >
                           <IoTrashOutline />
                         </Button>
                       </Tooltip>

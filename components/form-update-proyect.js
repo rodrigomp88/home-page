@@ -7,14 +7,14 @@ import {
   VStack,
   useDisclosure,
   Modal,
-  Box,
   ModalOverlay,
   ModalContent,
   ModalHeader,
   ModalFooter,
   ModalBody,
   ModalCloseButton,
-  FormLabel
+  FormLabel,
+  Tooltip
   // Image,
   // Grid,
   // GridItem
@@ -25,14 +25,13 @@ import {
   arrayUnion,
   collection,
   doc,
-  serverTimestamp,
   updateDoc
 } from 'firebase/firestore'
 import { getDownloadURL, ref, uploadBytes } from 'firebase/storage'
 import { useDropzone } from 'react-dropzone'
 import { db, storage } from '../config/firebase'
 
-export const FormAddProyect = () => {
+export const FormUpdateProyect = () => {
   const { isOpen, onOpen, onClose } = useDisclosure()
 
   const [title, setTitle] = useState('')
@@ -48,8 +47,7 @@ export const FormAddProyect = () => {
       description,
       stack,
       urlDeploy,
-      urlRepo,
-      timestamp: serverTimestamp()
+      urlRepo
     })
     await Promise.all(
       selectedFiles.map(image => {
@@ -110,24 +108,17 @@ export const FormAddProyect = () => {
 
   return (
     <>
-      <Box align="center" mb={4}>
-        <Button
-          boxShadow="lg"
-          p="2"
-          rightIcon={<AddIcon ml={4} />}
-          colorScheme="teal"
-          justifyContent="space-between"
-          onClick={onOpen}
-        >
-          Cargar nuevo proyecto
+      <Tooltip label="Editar" placement="top">
+        <Button ml={5} colorScheme="yellow" onClick={onOpen}>
+          <AddIcon />
         </Button>
-      </Box>
+      </Tooltip>
 
       <Modal isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
         <ModalContent>
           <form>
-            <ModalHeader>Cargar nuevo proyecto</ModalHeader>
+            <ModalHeader>Actualizar proyecto</ModalHeader>
             <ModalCloseButton colorScheme="red" />
             <ModalBody>
               <VStack spacing={4} w={{ base: 'auto', md: 'sm' }}>
@@ -155,40 +146,6 @@ export const FormAddProyect = () => {
                     <div className="grid">{selected_images}</div>
                   </div>
                 </FormControl>
-                {/* <FormControl>
-                  <Button onClick={() => fileRef.current.click()}>
-                    <Input
-                      type="file"
-                      hidden
-                      required
-                      accept=".png, .jpeg, .webp, .jpg"
-                      ref={fileRef}
-                      onChange={addFile}
-                    />
-                    Cargar imagen
-                  </Button>
-                  {selectedFile && (
-                    <Container>
-                      <Grid>
-                        <GridItem>
-                          <Box mt={2} onClick={() => setSelectedFile(null)}>
-                            <Button variant="ghost" colorScheme="red">
-                              Borrar
-                            </Button>
-                          </Box>
-                        </GridItem>
-                        <GridItem>
-                          <Image
-                            src={selectedFile}
-                            alt=""
-                            objectFit="cover"
-                            boxSize="100px"
-                          />
-                        </GridItem>
-                      </Grid>
-                    </Container>
-                  )}
-                </FormControl> */}
                 <FormControl>
                   <FormLabel htmlFor="description">
                     Descripción del proyecto
